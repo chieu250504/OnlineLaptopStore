@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = null; 
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link href="~/Content/Style_Home.css" rel="stylesheet" type="text/css" />
+    <script src="~/Content/main.js"></script>
+</head>
+<body>
+    <div class="login">
+        <div class="panner">
+            <img src="~/Picture/Pane/paneLogin.jpg" />
+            <div class="smember-box">
+                <div class="smember-item">
+                    <img src="~/Picture/Icon/gift.png" alt="Gift Icon" />
+                    <span><strong>Chiết khấu đến 5%</strong> khi mua các sản phẩm mua tại CellphoneS</span>
+                </div>
+                <div class="smember-item">
+                    <img src="~/Picture/Icon/gift.png" alt="Gift Icon" />
+                    <span><strong>Miễn phí giao hàng</strong> cho thành viên Laptop88 và cho đơn hàng từ 300.000đ</span>
+                </div>
+                <div class="smember-item">
+                    <img src="~/Picture/Icon/gift.png" alt="Gift Icon" />
+                    <span><strong>Tặng voucher sinh nhật đến 500.000đ</strong> cho khách hàng thành viên</span>
+                </div>
+                <div class="smember-item">
+                    <img src="~/Picture/Icon/gift.png" alt="Gift Icon" />
+                    <span>Trợ giá thu cũ lên đến <strong>1 triệu</strong></span>
+                </div>
+                <div class="smember-item">
+                    <img src="~/Picture/Icon/gift.png" alt="Gift Icon" />
+                    <span>Thăng hạng nhận voucher <strong>đến 300.000đ</strong></span>
+                </div>
+                <div class="smember-item">
+                    <img src="~/Picture/Icon/gift.png" alt="Gift Icon" />
+                    <span>Đặc quyền Student/Teacher <strong>ưu đãi thêm đến 10%</strong></span>
+                </div>
+                <div class="smember-link">
+                    <a href="#">Xem chi tiết chính sách ưu đãi Laptop88</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg">
+            <div class="login-container">
+                <h2>Đăng nhập <span class="highlight">Laptop88</span></h2>
+
+                <!-- Form đăng nhập -->
+                <form method="post" action="@Url.Action("Login", "Account")">
+                    <input type="text" name="username" class="input-field" placeholder="Nhập số điện thoại của bạn" required />
+
+                    <input type="password" name="password" class="input-field" placeholder="Nhập mật khẩu của bạn" required />
+
+                    <button type="submit" class="login-button">Đăng nhập</button>
+                </form>
+
+                @if (ViewBag.Error != null)
+                {
+                    <div class="note" style="color:red">@ViewBag.Error</div>
+                }
+
+                <div class="note">
+                    Trải nghiệm đăng nhập liền mạch giữa Laptop88 và các dịch vụ khác, ưu tiên dùng tài khoản Laptop88 (nếu có)
+                </div>
+
+                <div class="forgot-password">
+                    <a href="@Url.Action("ForgotPassword", "Account")">Quên mật khẩu?</a>
+                </div>
+
+                <div class="separator">
+                    <span></span>
+                    <p>Hoặc đăng nhập bằng</p>
+                    <span></span>
+                </div>
+
+                <div class="social-login">
+                    <button class="zalo-btn" onclick="location.href='@Url.Action("GoogleLogin", "Account")'">
+                        <img src="~/Picture/Icon/google.png" /> Google
+                    </button>
+                    <span class="dot">•</span>
+                    <button class="zalo-btn">
+                        <img src="~/Picture/Icon/Zalo.jpg" /> Zalo
+                    </button>
+                </div>
+
+                <div class="register">
+                    Bạn chưa có tài khoản? <a href="@Url.Action("Register", "Account")" class="highlight">Đăng ký ngay</a>
+                </div>
+
+                <div class="footer">
+                    Mua sắm, sửa chữa tại <span class="highlight">laptop88.vn</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

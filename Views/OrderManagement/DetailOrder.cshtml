@@ -1,0 +1,75 @@
+﻿@model Laptop88_3.Controllers.ShippingOrderDetailViewModel
+
+@{
+    ViewBag.Title = "Chi tiết đơn hàng";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="order-detail-container">
+
+    <h2 class="order-detail-title">Chi tiết đơn hàng: @Model.OrderCode</h2>
+
+    <div class="order-detail-info">
+        <p><span class="order-detail-label">Trạng thái:</span> <span class="order-detail-value">@Model.Status</span></p>
+        <p><span class="order-detail-label">Người nhận:</span> <span class="order-detail-value">@Model.ToName</span></p>
+        <p><span class="order-detail-label">SĐT:</span> <span class="order-detail-value">@Model.ToPhone</span></p>
+        <p><span class="order-detail-label">Địa chỉ:</span> <span class="order-detail-value">@Model.ToAddress</span></p>
+        <p><span class="order-detail-label">Ghi chú vận chuyển:</span> <span class="order-detail-value">@Model.ShippingNote</span></p>
+        <p><span class="order-detail-label">Khối lượng:</span> <span class="order-detail-value">@Model.Weight</span></p>
+    </div>
+
+    <h3 class="order-detail-section-title">Danh sách sản phẩm</h3>
+    <table class="order-detail-table order-detail-items">
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Số lượng</th>
+                <th>Khối lượng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Weight</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3 class="order-detail-section-title">Lịch sử trạng thái</h3>
+    <table class="order-detail-table order-detail-log">
+        <thead>
+            <tr>
+                <th>Trạng thái</th>
+                <th>Ngày cập nhật</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var log in Model.Log)
+            {
+                <tr>
+                    <td>@log.Status</td>
+                    <td>@log.UpdatedDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="order-detail-actions" style="margin-bottom:20px;">
+        <a class="btn btn-primary" target="_blank"
+           href="@Url.Action("PrintOrder", "OrderManagement", new { orderCode = Model.OrderCode, format = "A5" })">
+            🖨 In hóa đơn A5
+        </a>
+        <a class="btn btn-secondary" target="_blank"
+           href="@Url.Action("PrintOrder", "OrderManagement", new { orderCode = Model.OrderCode, format = "80x80" })">
+            🖨 In 80x80
+        </a>
+        <a class="btn btn-info" target="_blank"
+           href="@Url.Action("PrintOrder", "OrderManagement", new { orderCode = Model.OrderCode, format = "50x72" })">
+            🖨 In 50x72
+        </a>
+    </div>
+</div>
+

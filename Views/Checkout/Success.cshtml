@@ -1,0 +1,77 @@
+﻿@model Laptop88_3.Controllers.OrderSuccessViewModel
+
+@{
+    ViewBag.Title = "Đặt hàng thành công";
+    Layout = "~/Views/Shared/Layout_header2.cshtml";
+}
+
+@section checkout {
+    <div class="order-success-container">
+        <div class="order-header">
+            <i class="fa fa-check-circle"></i>
+            <h2>Đặt hàng thành công!</h2>
+            <p>Cảm ơn bạn đã mua sắm tại <strong>Laptop88</strong>.</p>
+        </div>
+
+        <div class="order-info">
+            <h3>Thông tin đơn hàng</h3>
+            <ul>
+                <li><strong>Mã đơn hàng:</strong> @Model.OrderID</li>
+                <li><strong>Ngày đặt:</strong> @Model.OrderDate.ToString("dd/MM/yyyy")</li>
+                <li><strong>Địa chỉ giao hàng:</strong> @Model.ShippingAddress</li>
+                <li><strong>Trạng thái:</strong> @Model.Status</li>
+                <li><strong>Phương thức thanh toán: </strong>@Model.PaymentMethod</li>
+                <li><strong>Dự kiến giao hàng:</strong> @Model.EstimatedDelivery.ToString("dd/MM/yyyy")</li>
+            </ul>
+        </div>
+
+        <div class="order-details" style="margin-top: 30px;">
+            <h3>Chi tiết đơn hàng</h3>
+            <table class="order-table" style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+                <thead>
+                    <tr style="background-color: #f5f5f5;">
+                        <th style="padding: 10px; text-align: left;">Sản phẩm</th>
+                        <th style="padding: 10px; text-align: center;">Số lượng</th>
+                        <th style="padding: 10px; text-align: right;">Đơn giá</th>
+                        <th style="padding: 10px; text-align: right;">Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Items)
+                    {
+                        bool isGift = item.UnitPrice == 0m;
+                        <tr style="border-bottom: 1px solid #eee; vertical-align: middle;">
+                            <td style="padding: 10px; display: flex; align-items: center;">
+                                <img src="@Url.Content("~/Picture/product/" + item.ImageURL)"
+                                     alt="@item.ProductName"
+                                     style="width: 60px; height: 60px; object-fit: cover; border-radius: 6px; margin-right: 10px;" />
+                                <div>
+                                    @if (isGift)
+                                    {
+                                        <strong style="color: #ff6600;">🎁 QUÀ TẶNG</strong><br />
+                                    }
+                                    @item.ProductName
+                                </div>
+                            </td>
+                            <td style="text-align: center;">@item.Quantity</td>
+                            <td style="text-align: right;">
+                                @(isGift ? "0 ₫" : item.UnitPrice.ToString("N0") + " ₫")
+                            </td>
+                            <td style="text-align: right;">
+                                @(isGift ? "0 ₫" : (item.Quantity * item.UnitPrice).ToString("N0") + " ₫")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="order-total">
+            <p><strong>Tổng cộng:</strong> <span>@Model.TotalAmount.ToString("N0") ₫</span></p>
+        </div>
+
+        <div class="order-actions">
+            <a href="@Url.Action("Index", "Home")" class="btn-continue">Tiếp tục mua sắm</a>
+        </div>
+    </div>
+}

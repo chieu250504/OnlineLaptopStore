@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Danh sách sản phẩm";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model List<Laptop88_3.Controllers.ProductManagementViewModel>
+
+<div class="order-container">
+    <h2>🛒 Danh sách sản phẩm</h2>
+
+    @if (TempData["success"] != null)
+    {
+        <div class="alert alert-success">@TempData["success"]</div>
+    }
+    @if (TempData["error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["error"]</div>
+    }
+
+    <table class="order-table">
+        <thead>
+            <tr>
+                <th style="width:80px;">Mã SP</th>
+                <th style="width:180px;">Tên sản phẩm</th>
+                <th style="width:100px;">Giá gốc</th>
+                <th style="width:100px;">Giá KM</th>
+                <th style="width:140px;">Khuyến mại</th>
+                <th style="width:80px;">Tồn</th>
+                <th style="width:90px;">Màu</th>
+                <th style="width:140px;">Danh mục</th>
+                <th style="width:180px;">Quà tặng</th>
+                <th style="width:120px;">Ngày tạo</th>
+                <th style="width:200px;">Ảnh</th>
+                <th style="width:140px;">
+                    <a href="/ProductManagement/Create" class="create-btn">Thêm mới +</a>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.ProductID</td>
+                    <td class="truncate" title="@p.ProductName">@p.ProductName</td>
+                    <td >@p.OriginalPrice.ToString("N0") ₫</td>
+                    <td class="price-cell">@p.CurrentPrice.ToString("N0") ₫</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(p.PromotionsApplied) && p.PromotionsApplied != "Không có")
+                        {
+                            <span title="@p.PromotionsApplied">@p.PromotionsApplied</span>
+                        }
+                        else
+                        {
+                            <span>Không có</span>
+                        }
+                    </td>
+                    <td class="text-center">@p.Stock</td>
+                    <td>@p.Color</td>
+                    <td>@p.CategoryName</td>
+                    <td>
+                        @if (p.GiftNames != null && p.GiftNames.Count > 0)
+                        {
+                            <span class="status-pending" title="@string.Join(", ", p.GiftNames)">
+                                @string.Join(", ", p.GiftNames)
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="status-done">Không có</span>
+                        }
+                    </td>
+                    <td>@p.CreatedAt.ToString("dd/MM/yyyy")</td>
+                    <td class="text-center">
+                        <img src="@Url.Content("~/Picture/product/" + p.ImageURL)" width="60" height="45" style="border-radius:6px;" />
+                    </td>
+                    <td class="icon-cell">
+                        <a href="@Url.Action("Detail", "ProductManagement", new { id = p.ProductID })">
+                            <img src="~/Picture/Icon/detail.png" class="action-icon" title="Xem chi tiết" />
+                        </a>
+                        <a href="@Url.Action("Edit", "ProductManagement", new { id = p.ProductID })">
+                            <img src="~/Picture/Icon/note.png" class="action-icon" title="Chỉnh sửa" />
+                        </a>
+                        <a href="@Url.Action("Delete", "ProductManagement", new { id = p.ProductID })"
+                           onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?');">
+                            <img src="~/Picture/Icon/delete.png" class="action-icon" title="Xóa sản phẩm" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

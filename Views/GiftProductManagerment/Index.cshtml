@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Danh sách quà tặng";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model List<Laptop88_3.Controllers.GiftProductManagermentController.GiftProductViewModel>
+
+<div class="order-container">
+    <h2>🎁 Danh sách quà tặng</h2>
+
+    @if (TempData["success"] != null)
+    {
+        <div class="alert alert-success">@TempData["success"]</div>
+    }
+    @if (TempData["error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["error"]</div>
+    }
+
+    <table class="order-table">
+        <thead>
+            <tr>
+                <th style="width:80px;">ID Quà</th>
+                <th style="width:180px;">SP chính</th>
+                <th style="width:180px;">Quà tặng</th>
+                <th style="width:100px;">Số lượng</th>
+                <th style="width:180px;">Khuyến mại</th>
+                <th style="width:140px;">
+                    <a href="@Url.Action("Create", "GiftProductManagerment")" class="create-btn">Thêm mới +</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var g in Model)
+            {
+                <tr>
+                    <td>@g.ProductGiftID</td>
+                    <td class="truncate" title="@g.MainProductName">@g.MainProductName</td>
+                    <td class="truncate" title="@g.GiftProductName">@g.GiftProductName</td>
+                    <td class="text-center">@g.Quantity</td>
+                    <td>@(string.IsNullOrEmpty(g.PromotionName) ? "Không có" : g.PromotionName)</td>
+                    <td class="icon-cell">
+                        <a href="@Url.Action("Edit", "GiftProductManagerment", new { id = g.ProductGiftID })">
+                            <img src="~/Picture/Icon/note.png" class="action-icon" title="Chỉnh sửa" />
+                        </a>
+                        <a href="@Url.Action("Delete", "GiftProductManagerment", new { id = g.ProductGiftID })"
+                           onclick="return confirm('Bạn có chắc muốn xóa quà tặng này?');">
+                            <img src="~/Picture/Icon/delete.png" class="action-icon" title="Xóa quà tặng" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

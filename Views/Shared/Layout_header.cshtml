@@ -1,0 +1,533 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>laptop88</title>
+    <link href="~/Content/Style_Home.css" rel="stylesheet" />
+    <script src="~/Content/Script.js" defer></script>
+</head>
+<body style="background-color:#F8F8F8F8">
+    <a href="@Url.Action("Index", "Cart")" style="text-decoration: none;">
+        <div class="shopping">
+            <img src="~/Picture/Icon/shopping.png" />
+        </div>
+    </a>
+
+    <div class="popup">
+        <img src="~/Picture/Icon/messenger.webp" style="width:60px" />
+        <a>Chat Messenger</a>
+    </div>
+
+    <a href="https://zalo.me/0335453297" target="_blank" style="text-decoration: none;">
+        <div class="popup a1">
+            <img src="~/Picture/Icon/Zalo.jpg" style="width:50px" />
+            <a>Chat Zalo</a>
+        </div>
+    </a>
+
+    <div class="popup a2">
+        <div class="icon">
+            <img src="~/Picture/Icon/phone.png" />
+        </div>
+        <a>Yêu cầu tư vấn</a>
+    </div>
+
+    <div class="popup a3">
+        <div class="icon">
+            <img src="~/Picture/Icon/phone.png" />
+        </div>
+        <a>0247.106.999</a>
+    </div>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <img class="logo" src="~/Picture/Pane/logo_logo882022.png" style="height:80px;" onclick="location.href='@Url.Action("Index", "Home")';" />
+            <div class="search">
+                <input class="search1" placeholder="tìm kiếm" type="text" id="search1" />
+                <div class="search-icon" onclick="searchRedirect()" style="cursor: pointer;">
+                    <img src="~/Picture/Icon/search.png" style="height:25px;" />
+                </div>
+            </div>
+
+            <div class="menu1">
+                <img src="~/Picture/Icon/UserMenu.png" style="height:45px;" />
+                <div>
+                    <a>Góp ý</a>
+                    <a>Kiếu nại</a>
+                </div>
+            </div>
+
+            <div class="menu1">
+                <img src="~/Picture/Icon/Tu_Van.png" style="height:65px;" />
+                <div>
+                    <a>Liên hệ</a>
+                    <a>Trực tiếp</a>
+                </div>
+            </div>
+
+            <div class="menu1">
+                <img src="~/Picture/Icon/repair.png" style="height:35px;" />
+                <div>
+                    <a>Tư vấn</a>
+                    <a>Mua hàng</a>
+                </div>
+            </div>
+
+            <div class="menu1">
+                <img src="~/Picture/Icon/UserMenu.png" style="height:45px;" onclick="location.href='@Url.Action("Profile", "User")';" />
+            </div>
+
+            @using Laptop88_3.Models
+
+            @{
+                var currentUser = Session["User"] as User;
+            }
+
+            <div class="user-box">
+                <div class="user-info">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <span class="user-name">@User.Identity.Name</span>
+                    }
+                </div>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form method="post" action="@Url.Action("Logout", "Account")">
+                        <button type="submit" class="logout-button">Đăng xuất</button>
+                    </form>
+                }
+                else
+                {
+                    <form method="get" action="@Url.Action("Login", "Account")">
+                        <button type="submit" class="logout-button">Đăng nhập</button>
+                    </form>
+                }
+            </div>
+
+
+            <div class="menu2">
+                <div class="menu_inner2"><a>Chính sách</a></div>
+                <div class="menu_inner2"><a>Tuyển dụng</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar2">
+        <div class="navbar2-inner">
+            <div class="nav2-i1"><a>DANH MỤC SẢN PHẨM</a></div>
+            <div class="nav2-i2"><a>LOQ RTX 3050 chỉ 19Tr rẻ nhất TT</a></div>
+            <div class="nav2-i2"><a>Laptop gaming RẺ NHẤT TT chỉ 15Tr</a></div>
+            <div class="nav2-i2"><a>Thinkbook 16 - Ultrabook chiến game khoẻ mắt</a></div>
+        </div>
+    </div>
+    <div class="navbar3">
+        <div class="menu3">
+            <div class="menu31">
+                <a>Lap top moi</a>
+                <div class="submenu2">
+                    <table>
+                        <tr>
+                            <th>Laptop mới chính hãng</th>
+                            <th>Chon Laptop theo nhu cau</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="submenu3-container">
+                                    <a>Laptop Asus</a>
+                                    <div class="submenu3">
+                                        <a>Laptop Asus core I3</a>
+                                        <a>Laptop Asus core I5</a>
+                                        <a>Laptop Asus core I7</a>
+                                        <a>Laptop Asus Vivo Book</a>
+                                        <a>Laptop Asus ROG</a>
+                                        <a>Laptop Asus ZenBook</a>
+                                        <a>Laptop Asus TUF</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="submenu3-container">
+                                    <a>Laptop sinh vien, van phong</a>
+                                    <div class="submenu3">
+                                        <a>Laptop Asus core I3</a>
+                                        <a>Laptop Asus core I5</a>
+                                        <a>Laptop Asus core I7</a>
+                                        <a>Laptop Asus Vivo Book</a>
+                                        <a>Laptop Asus ROG</a>
+                                        <a>Laptop Asus ZenBook</a>
+                                        <a>Laptop Asus TUF</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="submenu3-container">
+                                    <a>Laptop Dell</a>
+                                    <div class="submenu3">
+                                        <a>Laptop Asus core I3</a>
+                                        <a>Laptop Asus core I5</a>
+                                        <a>Laptop Asus core I7</a>
+                                        <a>Laptop Asus Vivo Book</a>
+                                        <a>Laptop Asus ROG</a>
+                                        <a>Laptop Asus ZenBook</a>
+                                        <a>Laptop Asus TUF</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>laptop gaming</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="submenu3-container">
+                                    <a>Laptop Lenovo</a>
+                                    <div class="submenu3">
+                                        <a>Laptop Asus core I3</a>
+                                        <a>Laptop Asus core I5</a>
+                                        <a>Laptop Asus core I7</a>
+                                        <a>Laptop Asus Vivo Book</a>
+                                        <a>Laptop Asus ROG</a>
+                                        <a>Laptop Asus ZenBook</a>
+                                        <a>Laptop Asus TUF</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>laptop do hoa</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="submenu3-container">
+                                    <a>Laptop MSI</a>
+                                    <div class="submenu3">
+                                        <a>Laptop Asus core I3</a>
+                                        <a>Laptop Asus core I5</a>
+                                        <a>Laptop Asus core I7</a>
+                                        <a>Laptop Asus Vivo Book</a>
+                                        <a>Laptop Asus ROG</a>
+                                        <a>Laptop Asus ZenBook</a>
+                                        <a>Laptop Asus TUF</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>laptop mong nhe</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="submenu3-container">
+                                    <a>Laptop Acer</a>
+                                    <div class="submenu3">
+                                        <a>Laptop Asus core I3</a>
+                                        <a>Laptop Asus core I5</a>
+                                        <a>Laptop Asus core I7</a>
+                                        <a>Laptop Asus Vivo Book</a>
+                                        <a>Laptop Asus ROG</a>
+                                        <a>Laptop Asus ZenBook</a>
+                                        <a>Laptop Asus TUF</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>laptop AI</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="submenu3-container">
+                                    <a>Macbook moi 100%</a>
+                                    <div class="submenu3">
+                                        <a>Laptop Asus core I3</a>
+                                        <a>Laptop Asus core I5</a>
+                                        <a>Laptop Asus core I7</a>
+                                        <a>Laptop Asus Vivo Book</a>
+                                        <a>Laptop Asus ROG</a>
+                                        <a>Laptop Asus ZenBook</a>
+                                        <a>Laptop Asus TUF</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="submenu3-container">
+                                    <a>Laptop LQ</a>
+                                    <div class="submenu3">
+                                        <a>Laptop Asus core I3</a>
+                                        <a>Laptop Asus core I5</a>
+                                        <a>Laptop Asus core I7</a>
+                                        <a>Laptop Asus Vivo Book</a>
+                                        <a>Laptop Asus ROG</a>
+                                        <a>Laptop Asus ZenBook</a>
+                                        <a>Laptop Asus TUF</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="submenu3-container">
+                                    <a>Laptop Asus</a>
+                                    <div class="submenu3">
+                                        <a>Laptop Asus core I3</a>
+                                        <a>Laptop Asus core I5</a>
+                                        <a>Laptop Asus core I7</a>
+                                        <a>Laptop Asus Vivo Book</a>
+                                        <a>Laptop Asus ROG</a>
+                                        <a>Laptop Asus ZenBook</a>
+                                        <a>Laptop Asus TUF</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr><td>Microsoft surface</td></tr>
+                        <tr><td>Laptop Gigabye</td></tr>
+                        <tr><td>Laptop SamSung Galaxy</td></tr>
+                        <tr><td>Laptop Huawei</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="menu31">
+                <a>Lap top cu</a>
+            </div>
+            <div class="menu31">
+                <a>Linh kien PC-may tinh</a>
+            </div>
+            <div class="menu31">
+                <a>PC-may tinh de ban</a>
+            </div>
+            <div class="menu31">
+                <a>man hinh may tinh</a>
+            </div>
+            <div class="menu31">
+                <a>dien tu, dien lanh</a>
+            </div>
+            <div class="menu31">
+                <a>do gia dung</a>
+            </div>
+            <div class="menu31">
+                <a>phu kien may tinh</a>
+            </div>
+            <div class="menu31">
+                <a>cho thue laptop</a>
+            </div>
+        </div>
+        <div style="padding:5px">
+            <div class="slider-container">
+                <button class="prev">&#10094;</button>
+
+                <div class="content1">
+                    <img class="slide active" src="~/Picture/Pane/pn1.jpg" alt="pn1" />
+                    <img class="slide" src="~/Picture/Pane/pn2.jpg" alt="pn2" />
+                    <img class="slide" src="~/Picture/Pane/pn3.jpg" alt="pn3" />
+                    <img class="slide" src="~/Picture/Pane/pn4.jpg" alt="pn4" />
+                    <img class="slide" src="~/Picture/Pane/pn5.jpg" alt="pn5" />
+                </div>
+
+                <button class="next">&#10095;</button>
+            </div>
+
+
+            <div class="content11">
+                <div class="content111"><a>Laptop AI SALE shock</a><a>Chi tu 16 trieu</a></div>
+                <div class="content111"><a>tang voucher 99k khi</a><a>mua laptop-PC bat ky</a></div>
+                <div class="content111"><a>Laptop lenovo LOQ</a><a>6GB re nhat</a></div>
+                <div class="content111"><a>Build PC re nhat</a><a>Chi tu 6 trieu</a></div>
+                <div class="content111"><a>May loc khong khi</a><a>XIAOMI</a></div>
+            </div>
+        </div>
+        <div class="content2">
+            <div class="content21">
+                <img src="~/Picture/Icon/triangle.png" alt="search" style="transform: rotate(180deg);" />
+            </div>
+            <a>Ha noi - 125 Tran Dai Nghia</a>
+            <div class="content22">
+                <a>Zalo: 0904.583.588</a>
+            </div>
+            <a>Ha noi - 125 Tran Dai Nghia</a>
+            <div class="content22">
+                <a>Zalo: 0904.583.588</a>
+            </div>
+            <a>Ha noi - 125 Tran Dai Nghia</a>
+            <div class="content22">
+                <a>Zalo: 0904.583.588</a>
+            </div>
+            <a>Ha noi - 125 Tran Dai Nghia</a>
+            <div class="content22">
+                <a>Zalo: 0904.583.588</a>
+            </div>
+            <a>Ha noi - 125 Tran Dai Nghia</a>
+            <div class="content22">
+                <a>Zalo: 0904.583.588</a>
+            </div><br /><br />
+            <div class="content21">
+                <img src="~/Picture/Icon/triangle.png" alt="search" />
+            </div>
+
+        </div>
+    </div>
+    <div class="navbar4">
+        <img src="~/Picture/Pane/pn2.png" alt="search" />
+        <img src="~/Picture/Pane/pn2.png" alt="search" />
+        <img src="~/Picture/Pane/pn2.png" alt="search" />
+    </div>
+
+    @RenderSection("FlashSale", required: false)
+    @RenderSection("Student", required: false)
+    @RenderSection("Hight", required: false)
+    @RenderSection("Mouse", required: false)
+    @RenderSection("Search", required: false)
+    @RenderSection("Cart", required: false)
+    @RenderSection("scripts", required: false)
+
+    <div class="category-grid">
+        <a href="LINK1" class="category-item" style="background-color: #d1c4e9;">
+            <img src="~/Picture/Icon/icon_chuot.png" alt="Chuột" />
+            <span>Chuột máy tính</span>
+        </a>
+        <a href="LINK2" class="category-item" style="background-color: #e1bee7;">
+            <img src="~/Picture/Icon/icon_banphim.png" alt="Bàn phím" />
+            <span>Bàn phím</span>
+        </a>
+        <a href="LINK3" class="category-item" style="background-color: #f8bbd0;">
+            <img src="~/Picture/Icon/icon_balo.png" alt="Balo" />
+            <span>Balo, túi xách</span>
+        </a>
+        <a href="LINK4" class="category-item" style="background-color: #f48fb1;">
+            <img src="~/Picture/Icon/icon_tainghe.png" alt="Loa" />
+            <span>Loa, tai nghe</span>
+        </a>
+        <a href="LINK5" class="category-item" style="background-color: #f8bbd0;">
+            <img src="~/Picture/Icon/icon_o_cung.png" alt="Ổ cứng" />
+            <span>Ổ cứng di động</span>
+        </a>
+        <a href="LINK6" class="category-item" style="background-color: #90caf9;">
+            <img src="~/Picture/Icon/icon_daychuyendoi.png" alt="Cổng chuyển đổi" />
+            <span>Cổng chuyển đổi</span>
+        </a>
+        <a href="LINK7" class="category-item" style="background-color: #a5d6a7;">
+            <img src="~/Picture/Icon/icon_bandi.png" alt="Bàn di chuột" />
+            <span>Bàn di chuột</span>
+        </a>
+        <a href="LINK8" class="category-item" style="background-color: #ffe082;">
+            <img src="~/Picture/Icon/icon_usb.png" alt="USB flash" />
+            <span>USB flash</span>
+        </a>
+        <a href="LINK9" class="category-item" style="background-color: #ffcc80;">
+            <img src="~/Picture/Icon/icon_keotainhiet.png" alt="Keo tản nhiệt" />
+            <span>Keo tản nhiệt</span>
+        </a>
+        <a href="LINK10" class="category-item" style="background-color: #ef9a9a;">
+            <img src="~/Picture/Icon/icon_banquuyen.png" alt="Phần mềm" />
+            <span>Phần mềm bản quyền</span>
+        </a>
+    </div>
+
+    <div class="navbar4">
+        <img src="~/Picture/Pane/pn2.png" />
+        <img src="~/Picture/Pane/pn2.png" />
+        <img src="~/Picture/Pane/pn2.png" />
+    </div>
+
+    
+    <div class="footer2">
+        <div class="footer12">
+            <h3>HỆ THỐNG CỬA HÀNG LAPTOP88</h3>
+            <h3>Laptop88 Hà Nội</h3>
+            <a>125 Trần Đại Nghĩa - Quận Hai Bà Trưng.</a>
+            <a>(024.7106.9999 Máy lẻ 220) - Zalo: 0904.583.588 - Làm việc 8h - 21h</a>
+            <a>Xem chỉ đường</a>
+            <br />
+            <h3>Laptop88 Hà Nội</h3>
+            <a>87 Nguyễn Văn Lộc - Hà Đông (đầu Nguyễn Trãi 200m rẽ vào) - Máy lẻ 222 - Zalo: 0904.666.488 - Làm việc: 8h - 21h</a>
+            <a>Xem chỉ đường</a>
+            <br />
+            <h3>Laptop88 Hà Nội</h3>
+            <a>34 Hồ Tùng Mậu - Quận Cầu Giấy (024.7106.9999 Máy lẻ 221) - Zalo: 0911.042.665 - Làm việc 8h - 21h</a>
+            <a>Xem chỉ đường</a>
+        </div>
+        <div class="footer12">
+            <h3>HỆ THỐNG CỬA HÀNG LAPTOP88</h3>
+            <h3>Laptop88 Hà Nội</h3>
+            <a>277 Nguyễn Văn Cừ - Quận Long Biên</a>
+            <a>(024.7106.9999 Máy lẻ 220) - Zalo: 0904.583.588 - Làm việc 8h - 21h</a>
+            <a>Xem chỉ đường</a>
+        </div>
+        <div class="footer12">
+            <h3>HỆ THỐNG TTBH 88</h3>
+            <h3>Trung tâm bảo hành - Cơ sở 1</h3>
+            <a>40 Trần Đại Nghĩa - Hai Bà Trưng - Hà Nội</a>
+            <a>(024.7106.9999 số máy lẻ 310) - Làm việc: T2-CN: 8h30-19h30</a>
+            <a>Xem chỉ đường</a>
+            <br />
+            <h3>Trung tâm bảo hành - Cơ sở 2</h3>
+            <a>164 Nguyễn Xiển - Thanh Xuân - Hà Nội (024.7106.9999 số máy lẻ 311) - Làm việc: T2-CN: 8h30 - 19h30</a>
+            <a>Xem chỉ đường</a>
+            <br />
+            <h3>Trung tâm bảo hành - Cơ sở 3</h3>
+            <a>S88 Service - Số 68 đường Huỳnh Thúc Kháng (024.7106.9999 số máy lẻ 312) - Làm việc: T2-CN: 8h30-19h30</a>
+            <a>Xem chỉ đường</a>
+            <h3>Trung tâm bảo hành - Cơ sở 4</h3>
+            <a>106 Hồ Tùng Mậu - Cầu Giấy - Hà Nội (024.7106.9999 số máy lẻ 313) - Làm việc: T2-CN: 8h30-18h00</a>
+            <a>Xem chỉ đường</a>
+        </div>
+        <div class="footer12">
+            <h3>Trung tâm bảo hành - Cơ sở 5</h3>
+            <a>166 Vạn Phúc - Hà Đông - Hà Nội (024.7106.9999 số máy lẻ 224) - Làm việc: 8h30-19h30</a>
+            <a>Xem chỉ đường</a>
+        </div>
+    </div>
+    <p>DEBUG: Session User = @(Session["User"] == null ? "null" : "có dữ liệu")</p>
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll(".slide");
+        const items = document.querySelectorAll(".content111");
+        let autoSlide;
+
+        function showSlide(i) {
+            slides.forEach(s => s.classList.remove("active"));
+            items.forEach(c => c.classList.remove("active"));
+
+            slides[i].classList.add("active");
+            items[i].classList.add("active");
+        }
+
+        function nextSlide() {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        }
+
+        function restartAutoSlide() {
+            clearInterval(autoSlide);
+            autoSlide = setInterval(nextSlide, 3000); // mỗi 4 giây tự chạy
+        }
+
+        document.querySelector(".next").addEventListener("click", () => {
+            nextSlide();
+            restartAutoSlide();
+        });
+
+        document.querySelector(".prev").addEventListener("click", () => {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+            restartAutoSlide();
+        });
+
+        items.forEach((item, i) => {
+            item.addEventListener("click", () => {
+                index = i;
+                showSlide(index);
+                restartAutoSlide();
+            });
+        });
+
+        // chạy tự động lần đầu
+        showSlide(index);
+        autoSlide = setInterval(nextSlide, 4000);
+
+    </script>
+
+</body>
+
+</html>

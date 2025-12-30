@@ -1,0 +1,403 @@
+﻿@model Laptop88_3.Controllers.HomeAdminController.HomeAdminDashboardViewModel
+
+@{
+    ViewBag.Title = "Dashboard Admin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="dashboard-container">
+    <a href="#" class="dashboard-item orders-today">
+        <div class="dashboard-info">
+            <small>Đơn hàng hôm nay</small>
+            <div class="value-row">
+                <span class="dashboard-value">@Model.OrdersToday</span>
+                <span class="dashboard-change @(Model.OrdersChange >= 0 ? "positive" : "negative")">
+                    @(Model.OrdersChange >= 0 ? "+" : "")@Model.OrdersChange.ToString("0.##")%
+                </span>
+            </div>
+        </div>
+        <div class="dashboard-icon">
+            <img src="~/Picture/Icon/ShoppingAdmin.png" alt="icon" />
+        </div>
+    </a>
+
+    <a href="#" class="dashboard-item revenue-today">
+        <div class="dashboard-info">
+            <small>Doanh thu hôm nay</small>
+            <div class="value-row">
+                <span class="dashboard-value">@Model.RevenueToday.ToString("N0") VND</span>
+                <span class="dashboard-change @(Model.RevenueChange >= 0 ? "positive" : "negative")">
+                    @(Model.RevenueChange >= 0 ? "+" : "")@Model.RevenueChange.ToString("0.##")%
+                </span>
+            </div>
+        </div>
+        <div class="dashboard-icon">
+            <img src="~/Picture/Icon/money.png" alt="icon" />
+        </div>
+    </a>
+
+    <a href="#" class="dashboard-item new-customers">
+        <div class="dashboard-info">
+            <small>Khách hàng mới</small>
+            <div class="value-row">
+                <span class="dashboard-value">@Model.NewCustomersToday</span>
+                <span class="dashboard-change @(Model.NewCustomersChange >= 0 ? "positive" : "negative")">
+                    @(Model.NewCustomersChange >= 0 ? "+" : "")@Model.NewCustomersChange.ToString("0.##")%
+                </span>
+            </div>
+        </div>
+        <div class="dashboard-icon">
+            <img src="~/Picture/Icon/users.png" alt="icon" />
+        </div>
+    </a>
+
+    <a href="#" class="dashboard-item pending-orders">
+        <div class="dashboard-info">
+            <small>Đơn chờ xử lý</small>
+            <div class="value-row">
+                <span class="dashboard-value">@Model.PendingOrders</span>
+            </div>
+        </div>
+        <div class="dashboard-icon">
+            <img src="~/Picture/Icon/shoping.png" alt="icon" />
+        </div>
+    </a>
+</div>
+
+
+
+<div class="chart-sale-container">
+    <div class="chart-wrapper">
+        <canvas id="revenueChart"></canvas>
+    </div>
+    
+    <div class="sale1" >
+        <div class="sale11">
+            <img src="~/Picture/Icon/thunder.png" style="height:75px;" />
+            <a href="@Url.Action("Index", "PromotionManagement")">FLASH SALE</a>
+        </div>
+
+        <div class="sale1_content">
+            @foreach (var item in Model.SaleProducts)
+            {
+                <a href="@Url.Action("Details", "Products", new { id = item.ProductID })">
+                    <div class="product-item">
+                        <img src="@Url.Content("~/Picture/product/" + item.ImageURL)"
+                             alt="@item.ProductName"
+                             style="height:228px;margin-bottom:-20px;" />
+
+                        <h4 style="margin-left:15px;">@item.ProductName</h4>
+
+                        <div class="giagoc-giamgia">
+                            @if (item.DiscountPercent.HasValue)
+                            {
+                                <s>@item.Price.ToString("N0") đ</s>
+                                <div class="pr1-khuyenmai">
+                                    <a>-@( (int)item.DiscountPercent )%</a>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="pr1-gia">
+                            <h2>@item.FinalPrice.ToString("N0") đ</h2>
+                        </div>
+
+                        
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</div>
+
+    <style>
+        .chart-sale-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding-left: 215px;
+            margin-top: 20px;
+            align-items: flex-start;
+        }
+
+        .chart-wrapper {
+            background-color: #fff;
+            border-radius: 12px; 
+            padding: 15px; 
+            width: 60%; 
+            max-width: 900px; 
+            min-width: 900px; 
+            
+            margin-top: 20px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow-x: auto; 
+        }
+
+
+        #revenueChart {
+            height: 400px !important; 
+            width: 100% !important; 
+        }
+
+        .dashboard-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding-left: 215px;
+            padding-top: 25px;
+            margin: 0;
+        }
+
+        .dashboard-item {
+            padding-left: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 320px;
+            padding: 15px 20px;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+            .dashboard-item:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+            }
+
+        .dashboard-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+            .dashboard-info small {
+                font-size: 0.85rem;
+                color: #777;
+            }
+
+        .value-row {
+            display: flex;
+            align-items: center;
+            gap: 8px; 
+        }
+
+        .dashboard-value {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .dashboard-change {
+            font-size: 0.85rem;
+            font-weight: 500;
+            font-weight: bold;
+        }
+
+            .dashboard-change.positive {
+                color: #28a745;
+            }
+
+            .dashboard-change.negative {
+                color: #dc3545;
+            }
+
+        
+        .dashboard-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .dashboard-icon img {
+                width: 28px;
+                height: 28px;
+                object-fit: contain;
+            }
+
+        .sale1 {
+            width: 1270px;
+            height: 510px;
+            margin-top: 20px;
+            background: linear-gradient(to bottom, #ffa500 0%, #ff4500 50%, #ff0000 100%);
+            border-radius: 40px;
+            transform: scale(0.6); 
+            transform-origin: top left;
+        }
+
+        .sale11 {
+            display: flex;
+            height: 130px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+            .sale11 a {
+                font-size: 40px;
+                color: white;
+                font-weight: 600;
+            }
+
+            .sale11 div {
+                height: 40px;
+                width: 90px;
+                background-color: black;
+                color: white;
+                border-radius: 10px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                margin-left: 15px;
+                margin-right: 10px;
+            }
+
+                .sale11 div a {
+                    font-size: 25px;
+                }
+
+        .sale1_content {
+            height: 440px;
+            width: 1265px;
+            margin-left: 20px;
+            display: flex;
+        }
+
+        .product-item {
+            height: 360px;
+            width: 238px;
+            background-color: white;
+            margin-right: 10px;
+            padding: 5px;
+        }
+
+            .product-item h4 {
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                padding-bottom: -5px;
+            }
+
+            .product-item a {
+                font-size: 14px;
+            }
+
+        .pr1-gia {
+            height: 40px;
+            width: 220px;
+            background-color: orange;
+            color: white;
+            border-radius: 15px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin: auto;
+        }
+
+            .pr1-gia h2 {
+                color: white;
+                padding-bottom: 10px;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+            }
+
+        .pr1-khuyenmai {
+            height: 20px;
+            width: 35px;
+            background-color: red;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border-radius: 10px;
+            font-weight: 700;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        .giagoc-giamgia {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 15px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        .pr1-khuyenmai2 {
+            height: 10px;
+            width: 220px;
+            background-color: whitesmoke;
+            color: white;
+            border-radius: 20px;
+            margin: 5px auto;
+        }
+
+        .pr1-khuyenmai3 {
+            height: 10px;
+            background-color: red;
+            color: white;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .pr1-khuyenmai4 {
+            height: 25px;
+            color: black;
+            width: 210px;
+            border-radius: 20px;
+            margin: auto;
+            border: 1px solid black;
+            align-items: center;
+            display: flex;
+            padding-left: 10px;
+            font-weight: 500;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    const labels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ChartLabels));
+    const data = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ChartData));
+
+    const ctx = document.getElementById("revenueChart").getContext("2d");
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Doanh thu (VNĐ)',
+                data: data,
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                maxBarThickness: 40  
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: { display: true }
+                },
+                x: {
+                    ticks: { maxRotation: 0 },
+                    grid: { display: false }
+                }
+            }
+        }
+    });
+    </script>

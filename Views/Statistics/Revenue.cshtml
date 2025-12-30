@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "Thống kê doanh thu";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    .main-content {
+        margin-left: 200px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        min-height: 90vh;
+        box-sizing: border-box;
+    }
+
+        .main-content h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+    .stats-buttons {
+        margin-bottom: 20px;
+    }
+
+        .stats-buttons a {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-right: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+            .stats-buttons a.active {
+                background-color: #28a745 !important;
+            }
+
+            .stats-buttons a:hover {
+                background-color: #0056b3;
+                transform: translateY(-2px);
+            }
+
+    .chart-container {
+        overflow-x: auto;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
+
+    canvas {
+        height: 600px !important;
+    }
+</style>
+
+<div class="main-content">
+    <h2>@ViewBag.Title</h2>
+
+    <div class="stats-buttons">
+        <a href="@Url.Action("Revenue", "Statistics", new { type = "day" })"
+           class="@(ViewBag.Type == "day" ? "active" : "")">Theo ngày</a>
+
+        <a href="@Url.Action("Revenue", "Statistics", new { type = "month" })"
+           class="@(ViewBag.Type == "month" ? "active" : "")">Theo tháng</a>
+
+        <a href="@Url.Action("Revenue", "Statistics", new { type = "year" })"
+           class="@(ViewBag.Type == "year" ? "active" : "")">Theo năm</a>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="revenueChart"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const labels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.Labels));
+    const data = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.Data));
+    const type = "@ViewBag.Type";
+
+    const canvas = document.getElementById("revenueChart");
+    canvas.height = 600;
+
+    const columnWidth = 80;
+    canvas.width = labels.length * columnWidth;
+
+    const ctx = canvas.getContext("2d");
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Doanh thu (VNĐ)',
+                data: data,
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                maxBarThickness: 60
+            }]
+        },
+        options: {
+            responsive: false,
+            scales: {
+                x: {
+                    ticks: { maxRotation: 0 },
+                    grid: { display: false }
+                },
+                y: {
+                    beginAtZero: true,
+                    title: { display: true, text: "VNĐ" }
+                }
+            }
+        }
+    });
+</script>

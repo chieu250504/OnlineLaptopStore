@@ -1,0 +1,100 @@
+﻿@model Laptop88_3.Controllers.PromotionCreateViewModel
+
+@{
+    ViewBag.Title = "Thêm khuyến mãi mới";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="product-form-container">
+    <!-- dùng chung với sản phẩm -->
+    <h2>Thêm khuyến mãi mới</h2>
+
+    @using (Html.BeginForm("Create", "PromotionManagement", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.PromotionName, "Tên khuyến mãi")
+            @Html.TextBoxFor(m => m.PromotionName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.PromotionName, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Description, "Mô tả")
+            @Html.TextAreaFor(m => m.Description, new { @class = "form-control", rows = 3 })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.DiscountPercent, "Giảm %")
+            @Html.TextBoxFor(m => m.DiscountPercent, new { @class = "form-control", type = "number", min = "0" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.PricePromotion, "Giá khuyến mãi (nếu có)")
+            @Html.TextBoxFor(m => m.PricePromotion, new { @class = "form-control", type = "number", min = "0" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.StartDate, "Ngày bắt đầu")
+            @Html.TextBoxFor(m => m.StartDate, new { @class = "form-control", type = "date" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.EndDate, "Ngày kết thúc")
+            @Html.TextBoxFor(m => m.EndDate, new { @class = "form-control", type = "date" })
+        </div>
+
+        <div class="form-group">
+            <label>Áp dụng cho sản phẩm</label>
+            <div class="checkbox-container">
+                @foreach (var product in Model.Products)
+                {
+                    <div class="checkbox-item">
+                        <input type="checkbox"
+                               name="SelectedProductIDs"
+                               value="@product.Value"
+                               @(Model.SelectedProductIDs.Contains(product.Value) ? "checked" : "") />
+                        <span>@product.Text</span>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Quà tặng đi kèm</label>
+            <div class="checkbox-container">
+                @foreach (var gift in Model.Gifts)
+                {
+                    <div class="checkbox-item">
+                        <input type="checkbox"
+                               name="SelectedGiftProductIDs"
+                               value="@gift.Value"
+                               @(Model.SelectedGiftProductIDs.Contains(gift.Value) ? "checked" : "") />
+                        <span>@gift.Text</span>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Trạng thái</label>
+            @Html.CheckBoxFor(m => m.IsActive) <span>Kích hoạt</span>
+        </div>
+
+        <button type="submit" class="create-btn">Thêm khuyến mãi</button>
+        <a href="@Url.Action("Index", "PromotionManagement")" class="create-btn" style="background-color:#6c757d;">Hủy</a>
+    }
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@if (TempData["SuccessAdd"] != null)
+{
+    <script>
+        var result = confirm("Thêm khuyến mãi thành công!\nBạn có muốn tiếp tục thêm khuyến mãi khác không?");
+        if (result) {
+            window.location.href = '@Url.Action("Create", "PromotionManagement")';
+        } else {
+            window.location.href = '@Url.Action("Index", "PromotionManagement")';
+        }
+    </script>
+}

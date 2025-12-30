@@ -1,0 +1,180 @@
+﻿@model Laptop88_3.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Đăng ký Laptop88";
+    Layout = null; // dùng standalone để tận dụng CSS sẵn có
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>laptop88</title>
+    <link href="~/Content/Style_Home.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="login">
+        <div class="panner">
+            <img src="~/Picture/Pane/paneLogin.jpg" />
+            <div class="smember-box">
+                <div class="smember-item">
+                    <img src="~/Picture/Icon/gift.png" alt="Gift Icon" />
+                    <span><strong>Chiết khấu đến 5%</strong> khi mua các sản phẩm tại Laptop88</span>
+                </div>
+                <div class="smember-item">
+                    <img src="~/Picture/Icon/gift.png" alt="Gift Icon" />
+                    <span><strong>Miễn phí giao hàng</strong> cho thành viên Laptop88 và cho đơn hàng từ 300.000đ</span>
+                </div>
+                <div class="smember-item">
+                    <img src="@Url.Content("~/Picture/Icon/gift.png")" alt="Gift Icon" />
+                    <span><strong>Tặng voucher sinh nhật đến 500.000đ</strong> cho khách hàng thành viên</span>
+                </div>
+                <div class="smember-item">
+                    <img src="~/Picture/Icon/gift.png" alt="Gift Icon" />
+                    <span>Trợ giá thu cũ lên đến <strong>1 triệu</strong></span>
+                </div>
+                <div class="smember-item">
+                    <img src="~/Picture/Icon/gift.png" alt="Gift Icon" />
+                    <span>Thăng hạng nhận voucher <strong>đến 300.000đ</strong></span>
+                </div>
+                <div class="smember-item">
+                    <img src="~/Picture/Icon/gift.png" alt="Gift Icon" />
+                    <span>Đặc quyền Student/Teacher <strong>ưu đãi thêm đến 10%</strong></span>
+                </div>
+                <div class="smember-link">
+                    <a href="#">Xem chi tiết chính sách ưu đãi Laptop88</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg">
+            <div class="login-container">
+                <h2>Đăng Ký <span class="highlight">Laptop88</span></h2>
+
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { id = "registerForm" }))
+                {
+                    <label>Tên đăng nhập</label>
+                    @Html.TextBoxFor(m => m.Username, new { @class = "input-field", placeholder = "Nhập tên đăng nhập" })
+                    <span id="error-Username" class="error-message"></span>
+
+                    <label>Số điện thoại</label>
+                    @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "input-field", placeholder = "Nhập số điện thoại" })
+                    <span id="error-PhoneNumber" class="error-message"></span>
+
+                    <label>Email</label>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "input-field", placeholder = "Nhập email" })
+                    <span id="error-Email" class="error-message"></span>
+
+                    <label>Mật khẩu</label>
+                    @Html.PasswordFor(m => m.Password, new { @class = "input-field", placeholder = "Nhập mật khẩu" })
+                    <span id="error-Password" class="error-message"></span>
+
+                    <label>Nhập lại mật khẩu</label>
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "input-field", placeholder = "Nhập lại mật khẩu" })
+                    <span id="error-ConfirmPassword" class="error-message"></span>
+
+                    <button type="button" id="btnSendOtp" class="Otp-button">Gửi mã OTP</button>
+
+                    <label>Nhập mã OTP</label>
+                    <input type="text" id="Otp" name="Otp" class="input-field" placeholder="Mã OTP" />
+                    <span id="error-Otp" class="error-message"></span>
+                    <div id="otpResult" style="color:red; margin:5px 0;"></div>
+
+                    <button type="submit" class="login-button">Đăng ký</button>
+                    <div class="note">
+                        Trải nghiệm đăng nhập liền mạch giữa Laptop88 và các dịch vụ khác, ưu tiên dùng tài khoản Laptop88 (nếu có)
+                    </div>
+                }
+                <div class="separator">
+                    <span></span>
+                    <p>Hoặc đăng nhập bằng</p>
+                    <span></span>
+                </div>
+                <div class="social-login">
+                    <button class="zalo-btn">
+                        <img src="~/Picture/Icon/google.png" /> Google
+                    </button>
+                    <span class="dot">•</span>
+                    <button class="zalo-btn">
+                        <img src="~/Picture/Icon/Zalo.jpg" /> Zalo
+                    </button>
+                </div>
+                <div class="register">
+                    Bạn đã có tài khoản? <a href="@Url.Action("Login", "Account")" class="highlight">Đăng nhập</a>
+                </div>
+                <div class="footer">
+                    Mua sắm, sửa chữa tại <span class="highlight">laptop88.vn</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $("#btnSendOtp").click(function () {
+    var email = $("#Email").val();
+
+    if (email === "") {
+        $("#otpResult").text("Vui lòng nhập email!").css("color", "red");
+        return;
+    }
+
+    var seconds = 5;
+    var btn = $("#btnSendOtp");
+
+    
+    btn.prop("disabled", true);
+    btn.css({ "background": "gray" });
+    btn.text("Gửi lại (" + seconds + "s)");
+
+    var countdown = setInterval(function () {
+        seconds--;
+        btn.text("Gửi lại (" + seconds + "s)");
+
+        if (seconds <= 0) {
+            clearInterval(countdown);
+
+            
+            $.ajax({
+                url: "@Url.Action("SendOtp", "Account")",
+                type: "POST",
+                data: { Email: email },
+                success: function (res) {
+                    if (res.success) {
+                        $("#otpResult").css("color", "green").text("OTP đã gửi! (Test: " + res.debugOtp + ")");
+                    } else {
+                        $("#otpResult").css("color", "red").text("Gửi OTP thất bại: " + res.message);
+                    }
+                },
+                error: function () {
+                    $("#otpResult").css("color", "red").text("❌ Lỗi kết nối đến server!");
+                }
+            });
+
+            
+            btn.prop("disabled", false);
+            btn.css({ "background": "red" });
+            btn.text("Gửi lại");
+        }
+    }, 1000);
+});
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @if (ViewBag.RegisterSuccess != null && ViewBag.RegisterSuccess == true)
+    {
+        <script>
+        Swal.fire({
+            title: 'Đăng ký thành công!',
+            text: 'Nhấn OK để quay lại trang đăng nhập.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '@Url.Action("Login", "Account")';
+            }
+        });
+        </script>
+    }
+</body>
+</html>

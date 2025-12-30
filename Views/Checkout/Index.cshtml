@@ -1,0 +1,184 @@
+﻿@model Laptop88_3.Controllers.CheckoutViewModel
+
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Views/Shared/Layout_header2.cshtml";
+}
+
+@section checkout{
+    <div class="checkout-container">
+        <h2 class="checkout-title">Xác nhận đơn hàng</h2>
+
+        <div class="checkout-items">
+            @foreach (var item in Model.Items)
+            {
+                <div class="checkout-item">
+                    <div class="item-image">
+                        <img src="@Url.Content("~/Picture/product/" + item.ImageURL)" />
+                    </div>
+                    <div class="item-info">
+                        <h4 class="item-name">@item.ProductName</h4>
+                        <p class="item-price">Giá: @String.Format("{0:N0}", item.FinalPrice) ₫</p>
+                        <p class="item-quantity">Số lượng: @item.Quantity</p>
+                        <p class="item-total">
+                            Thành tiền:
+                            <strong>@String.Format("{0:N0}", item.FinalPrice * item.Quantity) ₫</strong>
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="checkout-summary">
+            <h3>Tổng cộng: <span>@String.Format("{0:N0}", Model.TotalAmount) ₫</span></h3>
+        </div>
+
+        <div class="checkout-form">
+            <h3 class="form-title">Thông tin giao hàng</h3>
+            @using (Html.BeginForm("PlaceOrder", "Checkout", FormMethod.Post))
+            {
+                <div class="form-card">
+
+                    <div class="form-group">
+                        <label for="ProvinceCode">Tỉnh/Thành phố</label>
+                        <select id="ProvinceCode" name="ProvinceCode" class="form-control" required>
+                            <option value="">-- Chọn Tỉnh/Thành phố --</option>
+                        </select>
+
+                        <input type="hidden" id="ProvinceName" name="ProvinceName" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="DistrictCode">Quận/Huyện</label>
+                        <select id="DistrictCode" name="DistrictCode" class="form-control" required>
+                            <option value="">-- Chọn Quận/Huyện --</option>
+                        </select>
+
+                        <input type="hidden" id="DistrictName" name="DistrictName" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="WardCode">Phường/Xã</label>
+                        <select id="WardCode" name="WardCode" class="form-control" required>
+                            <option value="">-- Chọn Phường/Xã --</option>
+                        </select>
+
+                        <input type="hidden" id="WardName" name="WardName" />
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="DetailAddress">Địa chỉ chi tiết</label>
+                        <input type="text" id="DetailAddress" name="DetailAddress"
+                               class="form-control" placeholder="Số nhà, ngõ, đường..." required />
+                    </div>
+                    <div class="form-group">
+                        <label for="PhoneShipping">Số điện thoại</label>
+                        <input type="text" id="PhoneShipping" name="PhoneShipping"
+                               class="form-control"
+                               value="@Model.Form.PhoneShipping" />
+
+                    </div>
+                    <div class="form-group">
+                        <label for="UserDescription">Ghi chú / Yêu cầu đặc biệt</label>
+                        <textarea id="UserDescription" name="UserDescription"
+                                  class="form-control"
+                                  placeholder="Nhập yêu cầu đặc biệt (nếu có)">@Model.Form.UserDescription</textarea>
+                    </div>
+
+                    <div class="form-group payment-method">
+                        <label>Phương thức thanh toán</label>
+                        <div class="payment-options">
+                            <input type="radio" id="cod" name="PaymentMethod" value="COD" checked>
+                            <label for="cod" class="payment-option">Thanh toán khi nhận hàng</label>
+
+                            <input type="radio" id="online" name="PaymentMethod" value="Online">
+                            <label for="online" class="payment-option">Thanh toán online</label>
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Đặt hàng</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "https://online-gateway.ghn.vn/shiip/public-api/master-data/province",
+                type: "GET",
+                headers: { "Token": "0dcd3f5a-a2cb-11f0-9210-12d668528f01" },
+                success: function (provinces) {
+                    provinces.data.forEach(function (p) {
+                        $("#ProvinceCode").append(`<option value="${p.ProvinceID}" data-name="${p.ProvinceName}">${p.ProvinceName}</option>`);
+                    });
+                }
+            });
+
+
+            $("#ProvinceCode").change(function () {
+                let provinceId = $(this).val();
+                let provinceName = $("#ProvinceCode option:selected").data("name");
+                $("#ProvinceName").val(provinceName);
+
+                $("#DistrictCode").html('<option value="">-- Chọn Quận/Huyện --</option>');
+                $("#WardCode").html('<option value="">-- Chọn Phường/Xã --</option>');
+
+                if (provinceId) {
+                    $.ajax({
+                        url: `https://online-gateway.ghn.vn/shiip/public-api/master-data/district?province_id=${provinceId}`,
+                        type: "GET",
+                        headers: { "Token": "0dcd3f5a-a2cb-11f0-9210-12d668528f01" },
+                        success: function (res) {
+                            res.data.forEach(function (d) {
+                                $("#DistrictCode").append(`<option value="${d.DistrictID}" data-name="${d.DistrictName}">${d.DistrictName}</option>`);
+                            });
+                        }
+                    });
+                }
+            });
+
+
+            $("#DistrictCode").change(function () {
+                let districtId = $(this).val();
+                let districtName = $("#DistrictCode option:selected").data("name");
+                $("#DistrictName").val(districtName);
+
+                $("#WardCode").html('<option value="">-- Chọn Phường/Xã --</option>');
+
+                if (districtId) {
+                    $.ajax({
+                        url: `https://online-gateway.ghn.vn/shiip/public-api/master-data/ward?district_id=${districtId}`,
+                        type: "GET",
+                        headers: { "Token": "0dcd3f5a-a2cb-11f0-9210-12d668528f01" },
+                        success: function (res) {
+                            res.data.forEach(function (w) {
+                                $("#WardCode").append(`<option value="${w.WardCode}" data-name="${w.WardName}">${w.WardName}</option>`);
+                            });
+                        }
+                    });
+                }
+            });
+
+            $("#WardCode").change(function () {
+                let wardName = $("#WardCode option:selected").data("name");
+                $("#WardName").val(wardName);
+            });
+        });
+
+
+
+
+    </script>
+}
+

@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>laptop88</title>
+    <link href="~/Content/Style_Admin.css" rel="stylesheet" />
+    <script src="~/Content/AdminScript.js" defer></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h4 onclick="location.href='@Url.Action("Home", "HomeAdmin")';">Laptop88</h4>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-title">Quản lý cửa hàng </p>
+            <ul>
+                <li><a href="@Url.Action("Home", "HomeAdmin")"><img src="~/Picture/Icon/HomeAdmin.png" /> Trang chủ</a></li>
+                <li><a href="@Url.Action("Index", "UserManagement")"><img src="~/Picture/Icon/ShoppingAdmin.png" />Người dùng</a></li>
+                <li><a href="@Url.Action("Index", "ProductManagement")"><img src="~/Picture/Icon/ShoppingAdmin.png" />Sản phẩm</a></li>
+                
+                <li><a href="#"><img src="~/Picture/Icon/ShoppingAdmin.png" />nhân viên</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-title">Quản lý đơn hàng</p>
+            <ul>
+                <li><a href="@Url.Action("Index", "OrderManagement")"><img src="~/Picture/Icon/HomeAdmin.png" /> Đơn hàng</a></li>
+                <li><a href="@Url.Action("PendingOrders", "OrderManagement")"><img src="~/Picture/Icon/ShoppingAdmin.png" />Chờ duyệt</a></li>
+                <li><a href="@Url.Action("ApprovedOrders", "OrderManagement")"><img src="~/Picture/Icon/ShoppingAdmin.png" />Đã giao</a></li>
+                <li><a href="@Url.Action("CancelledOrders", "OrderManagement")"><img src="~/Picture/Icon/ShoppingAdmin.png" />Đã hủy</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <p class="sidebar-title">Thống kê</p>
+            <ul>
+                <li><a href="@Url.Action("ProductStatistics", "Statistics")"><img src="~/Picture/Icon/HomeAdmin.png" /> Doanh thu</a></li>
+                <li><a href="#"><img src="~/Picture/Icon/ShoppingAdmin.png" />Lợi nhuận</a></li>
+                <li><a href="@Url.Action("Revenue", "Statistics")"><img src="~/Picture/Icon/ShoppingAdmin.png" />Sản phẩm</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-footer">
+            <p>Yash Admin Sales Management System © 2025 All Rights Reserved</p>
+            <p>Made with <span class="heart">♥</span> by DexignZone</p>
+        </div>
+    </div>
+    <header class="admin-header">
+        <div class="header-left">
+            <div class="header-left">
+                <h1>@ViewBag.Title</h1>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <div class="search-box">
+                <input type="text" id="globalSearchInput" placeholder="Tìm kiếm ở đây..." />
+                <button type="button" id="globalSearchBtn"><img src="~/Picture/Icon/search.png" alt="Search"></button>
+            </div>
+
+        </div>
+
+        <div class="header-right">
+            <div class="icon-btn"><img src="~/Picture/Icon/light.png" alt="thông báo"></div>
+            <div class="icon-btn"><img src="~/Picture/Icon/light.png" alt="Mail"></div>
+            <div class="icon-btn"><img src="~/Picture/Icon/user.png" alt="Mail"></div>
+            
+        </div>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("globalSearchInput");
+            const searchBtn = document.getElementById("globalSearchBtn");
+
+            // Tạo ô thông báo
+            const notification = document.createElement("div");
+            notification.id = "searchNotification";
+            notification.style.position = "fixed";
+            notification.style.top = "100px";
+            notification.style.left = "50%";
+            notification.style.transform = "translateX(-50%)";
+            notification.style.padding = "10px 20px";
+            notification.style.backgroundColor = "rgba(255,0,0,0.8)";
+            notification.style.color = "#fff";
+            notification.style.fontWeight = "bold";
+            notification.style.borderRadius = "5px";
+            notification.style.opacity = "0";
+            notification.style.transition = "opacity 0.5s";
+            notification.style.zIndex = "9999";
+            document.body.appendChild(notification);
+
+            function showNotification(message) {
+                notification.textContent = message;
+                notification.style.opacity = "1";
+                setTimeout(() => {
+                    notification.style.opacity = "0";
+                }, 5000);
+            }
+
+            function removeHighlights() {
+                document.querySelectorAll("td span.highlight").forEach(span => {
+                    const parent = span.parentNode;
+                    parent.replaceChild(document.createTextNode(span.textContent), span);
+                    parent.normalize();
+                });
+            }
+
+            function highlightText(cell, text) {
+                const regex = new RegExp(`(${text})`, "gi");
+                cell.innerHTML = cell.textContent.replace(regex, "<span class='highlight'>$1</span>");
+            }
+
+            function filterAndHighlightTables() {
+                const filter = searchInput.value.trim().toLowerCase();
+                removeHighlights();
+
+                if (!filter) return;
+
+                const tables = document.querySelectorAll("table");
+                let firstMatch = null;
+                let hasMatch = false;
+
+                tables.forEach(table => {
+                    const rows = table.getElementsByTagName("tr");
+
+                    for (let i = 1; i < rows.length; i++) { 
+                        const cells = rows[i].getElementsByTagName("td");
+                        let rowHasMatch = false;
+
+                        for (let j = 0; j < cells.length; j++) {
+                            const cell = cells[j];
+                            if (cell.textContent.toLowerCase().includes(filter)) {
+                                highlightText(cell, filter);
+                                rowHasMatch = true;
+                                hasMatch = true;
+                                if (!firstMatch) firstMatch = cell;
+                            }
+                        }
+                    }
+                });
+
+                if (!hasMatch) {
+                    showNotification("Không tìm thấy kết quả nào!");
+                }
+
+                if (firstMatch) {
+                    firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+                }
+            }
+
+            searchBtn.addEventListener("click", filterAndHighlightTables);
+            searchInput.addEventListener("keyup", function (e) {
+                if (e.key === "Enter") filterAndHighlightTables();
+            });
+        });
+
+
+    </script>
+
+
+    
+</body>
+
+</html>

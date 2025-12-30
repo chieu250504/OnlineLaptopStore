@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Laptop88_3</RootNamespace>
+    <AssemblyName>Laptop88_3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44337</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Identity.Core.2.2.4\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.4.2.2\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Host.SystemWeb.4.2.2\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.4.2.2\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.Cookies.4.2.2\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.Google.4.2.2\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.OAuth.4.2.2\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.7.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GiftProductManagermentController.cs" />
+    <Compile Include="Controllers\HomeAdminController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OderController.cs" />
+    <Compile Include="Controllers\OrderManagementController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\ProductManagementController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\PromotionManagementController.cs" />
+    <Compile Include="Controllers\SearchApiController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\StatisticsController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UserManagementController.cs" />
+    <Compile Include="Data\DbInitializer.cs" />
+    <Compile Include="Filters\AdminAuthorizeAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202511110649085_InitialCreate.cs" />
+    <Compile Include="Migrations\202511110649085_InitialCreate.Designer.cs">
+      <DependentUpon>202511110649085_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202511131545288_AddShippingCodeToOrders.cs" />
+    <Compile Include="Migrations\202511131545288_AddShippingCodeToOrders.Designer.cs">
+      <DependentUpon>202511131545288_AddShippingCodeToOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202511131549317_AddShippingCodeToOrders1.cs" />
+    <Compile Include="Migrations\202511131549317_AddShippingCodeToOrders1.Designer.cs">
+      <DependentUpon>202511131549317_AddShippingCodeToOrders1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202511131554332_AddDescriptionToOrder2.cs" />
+    <Compile Include="Migrations\202511131554332_AddDescriptionToOrder2.Designer.cs">
+      <DependentUpon>202511131554332_AddDescriptionToOrder2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202511140718552_UpdateOrderAddressStruct.cs" />
+    <Compile Include="Migrations\202511140718552_UpdateOrderAddressStruct.Designer.cs">
+      <DependentUpon>202511140718552_UpdateOrderAddressStruct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202511150726310_UpdateProductModel.cs" />
+    <Compile Include="Migrations\202511150726310_UpdateProductModel.Designer.cs">
+      <DependentUpon>202511150726310_UpdateProductModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202511180807247_AddDisplayTypeToPromotion.cs" />
+    <Compile Include="Migrations\202511180807247_AddDisplayTypeToPromotion.Designer.cs">
+      <DependentUpon>202511180807247_AddDisplayTypeToPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202511251426126_ChangeOrderAddressToName.cs" />
+    <Compile Include="Migrations\202511251426126_ChangeOrderAddressToName.Designer.cs">
+      <DependentUpon>202511251426126_ChangeOrderAddressToName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202511251439255_ChangeOrderAddressToCode.cs" />
+    <Compile Include="Migrations\202511251439255_ChangeOrderAddressToCode.Designer.cs">
+      <DependentUpon>202511251439255_ChangeOrderAddressToCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202511251546505_AddDimensionsToProduct.cs" />
+    <Compile Include="Migrations\202511251546505_AddDimensionsToProduct.Designer.cs">
+      <DependentUpon>202511251546505_AddDimensionsToProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AddresAPI.cs" />
+    <Compile Include="Models\AppDbContext.cs" />
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\LaptopSpecs.cs" />
+    <Compile Include="Models\MouseSpecs.cs" />
+    <Compile Include="Models\OderDetail.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductGift.cs" />
+    <Compile Include="Models\ProductPromotion.cs" />
+    <Compile Include="Models\ProductWithSpecs.cs" />
+    <Compile Include="Models\Promotion.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
+    <Compile Include="Models\Shop.cs" />
+    <Compile Include="Models\ShopProduct.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\OpenProvinceService.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\AdminScript.js" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Script.js" />
+    <Content Include="Content\Style_Admin.css" />
+    <Content Include="Content\Style_Home.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Picture\Icon\dealhot.png" />
+    <Content Include="Picture\Icon\delete.png" />
+    <Content Include="Picture\Icon\detail.png" />
+    <Content Include="Picture\Icon\dohoakythuat.png" />
+    <Content Include="Picture\Icon\game1.png" />
+    <Content Include="Picture\Icon\gift.png" />
+    <Content Include="Picture\Icon\google.png" />
+    <Content Include="Picture\Icon\hoctapvp.png" />
+    <Content Include="Picture\Icon\HomeAdmin.png" />
+    <Content Include="Picture\Icon\icon_balo.png" />
+    <Content Include="Picture\Icon\icon_bandi.png" />
+    <Content Include="Picture\Icon\icon_banphim.png" />
+    <Content Include="Picture\Icon\icon_banquuyen.png" />
+    <Content Include="Picture\Icon\icon_chuot.png" />
+    <Content Include="Picture\Icon\icon_daychuyendoi.png" />
+    <Content Include="Picture\Icon\icon_keotainhiet.png" />
+    <Content Include="Picture\Icon\icon_o_cung.png" />
+    <Content Include="Picture\Icon\icon_tainghe.png" />
+    <Content Include="Picture\Icon\icon_usb.png" />
+    <Content Include="Picture\Icon\icon_zalo.png" />
+    <Content Include="Picture\Icon\laptopmongnhe.png" />
+    <Content Include="Picture\Icon\light.png" />
+    <Content Include="Picture\Icon\manhinh1.png" />
+    <Content Include="Picture\Icon\money.png" />
+    <Content Include="Picture\Icon\no.png" />
+    <Content Include="Picture\Icon\note.png" />
+    <Content Include="Picture\Icon\phone.png" />
+    <Content Include="Picture\Icon\ram.png" />
+    <Content Include="Picture\Icon\repair.png" />
+    <Content Include="Picture\Icon\revosetup.exe" />
+    <Content Include="Picture\Icon\search.png" />
+    <Content Include="Picture\Icon\shoping.png" />
+    <Content Include="Picture\Icon\shopping.png" />
+    <Content Include="Picture\Icon\ShoppingAdmin.png" />
+    <Content Include="Picture\Icon\tainghe.png" />
+    <Content Include="Picture\Icon\Tell_Phone.png" />
+    <Content Include="Picture\Icon\thunder.png" />
+    <Content Include="Picture\Icon\triangle.png" />
+    <Content Include="Picture\Icon\Tu_Van.png" />
+    <Content Include="Picture\Icon\user.png" />
+    <Content Include="Picture\Icon\UserMenu.png" />
+    <Content Include="Picture\Icon\users.png" />
+    <Content Include="Picture\Icon\yes.png" />
+    <Content Include="Picture\Icon\Zalo.jpg" />
+    <Content Include="Picture\Icon\Zalo.svg" />
+    <Content Include="Picture\Pane\06_Febc72d3416d5e4ec026287942e1bcd6e98.png" />
+    <Content Include="Picture\Pane\Bannerchntrangbohnh390x200.png" />
+    <Content Include="Picture\Pane\BNDMLenovo.jpg" />
+    <Content Include="Picture\Pane\CTthng6_390x200.png" />
+    <Content Include="Picture\Pane\logo_logo882022.png" />
+    <Content Include="Picture\Pane\paneLogin.jpg" />
+    <Content Include="Picture\Pane\pn1.jpg" />
+    <Content Include="Picture\Pane\pn2.jpg" />
+    <Content Include="Picture\Pane\pn2.png" />
+    <Content Include="Picture\Pane\pn3.jpg" />
+    <Content Include="Picture\Pane\pn4.jpg" />
+    <Content Include="Picture\Pane\pn5.jpg" />
+    <Content Include="Picture\Pane\Tng-voucher-999k-590x221.jpg" />
+    <Content Include="Picture\Pane\voucher.png" />
+    <Content Include="Picture\product\mouse1.jpg" />
+    <Content Include="Picture\product\mouse2.jpg" />
+    <Content Include="Picture\product\mouse3.jpg" />
+    <Content Include="Picture\product\mouse4.jpg" />
+    <Content Include="Picture\product\mouse5.jpg" />
+    <Content Include="Picture\product\pr10.jpg" />
+    <Content Include="Picture\product\pr11.jpg" />
+    <Content Include="Picture\product\pr12.jpg" />
+    <Content Include="Picture\product\pr13.jpg" />
+    <Content Include="Picture\product\pr14.jpg" />
+    <Content Include="Picture\product\pr15.jpg" />
+    <Content Include="Picture\product\pr16.jpg" />
+    <Content Include="Picture\product\pr17.jpg" />
+    <Content Include="Picture\product\pr18.jpg" />
+    <Content Include="Picture\product\pr19.jpg" />
+    <Content Include="Picture\product\pr20.jpg" />
+    <Content Include="Picture\product\pr21.jpg" />
+    <Content Include="Picture\product\pr22.jpg" />
+    <Content Include="Picture\product\pr23.jpg" />
+    <Content Include="Picture\product\pr23.png" />
+    <Content Include="Picture\product\pr4.jpg" />
+    <Content Include="Picture\product\pr5.jpg" />
+    <Content Include="Picture\product\pr6.jpg" />
+    <Content Include="Picture\product\pr7.jpg" />
+    <Content Include="Picture\product\pr8.jpg" />
+    <Content Include="Picture\product\pr9.jpg" />
+    <Content Include="Picture\product\pro_poster_7575.jpg" />
+    <Content Include="Picture\product\pro_poster_7646.jpg" />
+    <Content Include="Picture\product\pro_poster_7648.jpg" />
+    <Content Include="Picture\product\pro_poster_8073.jpg" />
+    <Content Include="Picture\product\pro_poster_9085.jpg" />
+    <Content Include="Picture\product\pro_poster_9164.jpg" />
+    <Content Include="Picture\product\pro_poster_9211.jpg" />
+    <Content Include="Picture\product\pro_poster_9859.jpg" />
+    <Content Include="Picture\product\pr_1_Loq.jpg" />
+    <Content Include="Picture\Icon\messenger.webp" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.0.js" />
+    <Content Include="Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Layout_header.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Shared\Layout_header2.cshtml" />
+    <Content Include="Views\Oder\Detail.cshtml" />
+    <Content Include="Views\Checkout\Index.cshtml" />
+    <Content Include="Views\Checkout\Success.cshtml" />
+    <Content Include="Views\Payment\PaymentPage.cshtml" />
+    <Content Include="Views\HomeAdmin\Home.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\OrderManagement\Index.cshtml" />
+    <Content Include="Views\OrderManagement\DetailOrder.cshtml" />
+    <Content Include="Views\ProductManagement\Index.cshtml" />
+    <Content Include="Views\ProductManagement\Create.cshtml" />
+    <Content Include="Views\ProductManagement\Edit.cshtml" />
+    <Content Include="Views\PromotionManagement\Index.cshtml" />
+    <Content Include="Views\GiftProductManagerment\Index.cshtml" />
+    <Content Include="Views\Statistics\Revenue.cshtml" />
+    <Content Include="Views\Statistics\ProductStatistics.cshtml" />
+    <Content Include="Views\UserManagement\Index.cshtml" />
+    <Content Include="Views\UserManagement\Create.cshtml" />
+    <Content Include="Views\PromotionManagement\Create.cshtml" />
+    <Content Include="Views\PromotionManagement\Edit.cshtml" />
+    <Content Include="Views\User\Profile.cshtml" />
+    <Content Include="Views\User\_Info.cshtml" />
+    <Content Include="Views\User\_Orders.cshtml" />
+    <Content Include="Views\User\_Cart.cshtml" />
+    <Content Include="Views\Cart\_Cart.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202511110649085_InitialCreate.resx">
+      <DependentUpon>202511110649085_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202511131545288_AddShippingCodeToOrders.resx">
+      <DependentUpon>202511131545288_AddShippingCodeToOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202511131549317_AddShippingCodeToOrders1.resx">
+      <DependentUpon>202511131549317_AddShippingCodeToOrders1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202511131554332_AddDescriptionToOrder2.resx">
+      <DependentUpon>202511131554332_AddDescriptionToOrder2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202511140718552_UpdateOrderAddressStruct.resx">
+      <DependentUpon>202511140718552_UpdateOrderAddressStruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202511150726310_UpdateProductModel.resx">
+      <DependentUpon>202511150726310_UpdateProductModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202511180807247_AddDisplayTypeToPromotion.resx">
+      <DependentUpon>202511180807247_AddDisplayTypeToPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202511251426126_ChangeOrderAddressToName.resx">
+      <DependentUpon>202511251426126_ChangeOrderAddressToName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202511251439255_ChangeOrderAddressToCode.resx">
+      <DependentUpon>202511251439255_ChangeOrderAddressToCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202511251546505_AddDimensionsToProduct.resx">
+      <DependentUpon>202511251546505_AddDimensionsToProduct.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49849</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44337/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

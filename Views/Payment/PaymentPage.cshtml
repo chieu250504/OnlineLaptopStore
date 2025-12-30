@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Thanh toán đơn hàng";
+    Layout = "~/Views/Shared/Layout_header2.cshtml";
+}
+
+@section checkout {
+    <div class="checkout-container">
+        <div class="payment-card">
+            <h2 class="payment-title">Thanh toán đơn hàng </h2>
+
+            <div class="payment-summary">
+                <p><strong>Tổng tiền:</strong> <span class="payment-amount">@ViewBag.Total ₫</span></p>
+            </div>
+
+            <div class="payment-qr-section">
+                <h4 class="qr-title">Mã QR thanh toán</h4>
+                <img src="@ViewBag.QRImage" alt="QR Code" class="qr-image" />
+                <p class="qr-note">
+                    <i>Quét mã QR bằng ứng dụng ngân hàng để thanh toán.</i>
+                </p>
+            </div>
+
+            <div class="payment-actions">
+                @Html.ActionLink(
+                    "Xác nhận đã thanh toán",
+                    "PaymentSuccess",
+                    "Payment",
+                    new { orderId = ViewBag.OrderId },
+                    new { @class = "btn btn-confirm" }
+                )
+            </div>
+        </div>
+    </div>
+}
+
+
+

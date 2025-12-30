@@ -1,0 +1,123 @@
+﻿@{
+    ViewBag.Title = "Danh sách khuyến mại";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model List<Laptop88_3.Controllers.PromotionViewModel>
+
+<div class="order-container">
+    <h2>🎉 Danh sách khuyến mại</h2>
+
+    @if (TempData["success"] != null)
+    {
+        <div class="alert alert-success">@TempData["success"]</div>
+    }
+    @if (TempData["error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["error"]</div>
+    }
+
+    <table class="order-table">
+        <thead>
+            <tr>
+                <th style="width:60px;">ID KM</th>
+                <th style="width:140px;">Tên khuyến mại</th>
+                <th style="width:70px;">% Giảm</th>
+                <th style="width:90px;">Giá KM</th>
+                <th style="width:120px;">Thời gian</th>
+                <th style="width:90px;">Trạng thái</th>
+                <th style="width:200px;">Quà tặng</th>
+                <th style="width:350px;">Sản phẩm áp dụng</th> 
+                <th style="width:120px;">
+                    <a href="@Url.Action("Create", "PromotionManagement")" class="create-btn">Thêm mới +</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.PromotionID</td>
+                    <td class="truncate" title="@p.PromotionName">@p.PromotionName</td>
+                    <td>@p.DiscountPercent.ToString("N0") %</td>
+                    <td>@p.PricePromotion.ToString("N0") ₫</td>
+                    <td>@p.StartDate.ToString("dd/MM/yyyy") - @p.EndDate.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        @{
+                            var now = DateTime.Now;
+                            string statusText = "";
+                            string statusClass = "";
+
+                            if (!p.IsActive)
+                            {
+                                statusText = "Chưa kích hoạt";
+                                statusClass = "status-inactive"; 
+                            }
+                            else if (now < p.StartDate)
+                            {
+                                statusText = "Chưa đến hạn";
+                                statusClass = "status-upcoming"; 
+                            }
+                            else if (now > p.EndDate)
+                            {
+                                statusText = "Đã hết hạn";
+                                statusClass = "status-expired"; 
+                            }
+                            else if(p.DisplayType==1)
+                            {
+                                statusText = "Đang khuyến mãi";
+                                statusClass = "status-active"; 
+                            }
+                            else
+                            {
+                                statusText = "KM HOT";
+                                statusClass = "status-Hot"; 
+                            }
+                        }
+
+                        <span class="@statusClass">@statusText</span>
+                    </td>
+
+
+                    
+                    <td>
+                        @if (p.GiftList != null && p.GiftList.Count > 0)
+                        {
+                            <span class="status-pending" title="@string.Join(", ", p.GiftList)">
+                                @string.Join(", ", p.GiftList)
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="status-done">Không có</span>
+                        }
+                    </td>
+
+                    
+                    <td>
+                        @if (p.ProductList != null && p.ProductList.Count > 0)
+                        {
+                            foreach (var item in p.ProductList)
+                            {
+                                <span class="badge bg-success" style="margin:2px;">@item</span>
+                            }
+                        }
+                        else
+                        {
+                            <span class="status-done">Không có</span>
+                        }
+                    </td>
+
+                    <td class="icon-cell">
+                        <a href="@Url.Action("Edit", "PromotionManagement", new { id = p.PromotionID })">
+                            <img src="~/Picture/Icon/note.png" class="action-icon" title="Chỉnh sửa" />
+                        </a>
+                        <a href="@Url.Action("Delete", "PromotionManagement", new { id = p.PromotionID })"
+                           onclick="return confirm('Bạn có chắc muốn xóa khuyến mại này?');">
+                            <img src="~/Picture/Icon/delete.png" class="action-icon" title="Xóa khuyến mại" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

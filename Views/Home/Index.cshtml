@@ -1,0 +1,330 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/layout_header.cshtml";
+    var mouseProducts = ViewBag.MouseProducts as List<Laptop88_3.Models.Product>;
+    var saleProduct = ViewBag.SaleProducts as List<Laptop88_3.Models.ProductWithSpecs>;
+    var studentProduct = ViewBag.StudentProducts as List<Laptop88_3.Models.Product>;
+    var HightProduct = ViewBag.HightProducts as List<Laptop88_3.Models.Product>;
+}
+
+@section FlashSale{
+    <div class="sale1">
+        <div class="sale11">
+            <img src="~/Picture/Icon/thunder.png" style="height:75px;" />
+            <a>FLASH SALE</a>
+            @{
+                
+                var flashPromo = saleProduct
+                    .FirstOrDefault(p => p.DisplayType == 2);
+
+                
+                TimeSpan? timeLeft = null;
+                if (flashPromo != null && flashPromo.PromoEndDate.HasValue)
+                {
+                    timeLeft = flashPromo.PromoEndDate - DateTime.Now;
+                }
+
+                int days = timeLeft?.Days ?? 0;
+                int hours = timeLeft?.Hours ?? 0;
+                int minutes = timeLeft?.Minutes ?? 0;
+                int seconds = timeLeft?.Seconds ?? 0;
+            }
+            <div><a id="days">@days ngày</a></div><a>:</a>
+            <div><a id="hours">@hours giờ</a></div><a>:</a>
+            <div><a id="minutes">@minutes phút</a></div><a>:</a>
+            <div><a id="seconds">@seconds giây</a></div>
+        </div>
+
+        <div class="sale1_content">
+            @foreach (var item in saleProduct)
+            {
+                <a href="@Url.Action("Details", "Products", new { id = item.ProductID })">
+                    <div class="product-item">
+                        <img src="@Url.Content("~/Picture/product/" + item.ImageURL)" alt="@item.ProductName" style="height:235px;margin-bottom:-20px;" />
+                        <h4 style="margin-left:15px;">@item.ProductName</h4>
+                        <a>@item.ProductDescription</a>
+
+                        <div class="giagoc-giamgia">
+                            @if (item.DiscountPercent.HasValue)
+                            {
+                                <s>@item.Price.ToString("N0") đ</s>
+                                <div class="pr1-khuyenmai">
+                                    <a>-@( (int)item.DiscountPercent.Value )%</a>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="pr1-gia">
+                            <h2>@item.FinalPrice.ToString("N0") đ</h2>
+                        </div>
+
+                        @if (item.PromoProgressPercent.HasValue)
+                        {
+                            <div class="pr1-khuyenmai2">
+                                <div class="pr1-khuyenmai3" style="width:@(item.PromoProgressPercent.Value.ToString("0"))%;"></div>
+                            </div>
+                        }
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+
+    <script>
+        const flashProducts = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(
+            saleProduct.Select(p => new { p.ProductID, EndDate = p.PromoEndDate })
+        ));
+
+        flashProducts.forEach(p => {
+            const elemDays = document.getElementById("days");
+            const elemHours = document.getElementById("hours");
+            const elemMinutes = document.getElementById("minutes");
+            const elemSeconds = document.getElementById("seconds");
+
+            if (!p.EndDate) return;
+
+            const endDate = new Date(p.EndDate);
+
+            function updateCountdown() {
+                const now = new Date();
+                const diff = endDate - now; 
+
+                if (diff <= 0) {
+                    elemDays.innerText = "0 ngày";
+                    elemHours.innerText = "0 giờ";
+                    elemMinutes.innerText = "0 phút";
+                    elemSeconds.innerText = "0 giây";
+                    clearInterval(timer);
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((diff / (1000 * 60)) % 60);
+                const seconds = Math.floor((diff / 1000) % 60);
+
+                elemDays.innerText = days + " ngày";
+                elemHours.innerText = hours + " giờ";
+                elemMinutes.innerText = minutes + " phút";
+                elemSeconds.innerText = seconds + " giây";
+            }
+
+            updateCountdown();
+            const timer = setInterval(updateCountdown, 1000);
+        });
+    </script>
+}
+
+
+
+@section Student{
+    <div class="menu4">
+        <h3 style="margin-right: 360px;">Hoc sinh - Sinh vien</h3>
+        <div class="menu41">
+            <a>Acer</a>
+        </div>
+        <div class="menu41">
+            <a>Lenovo</a>
+        </div>
+        <div class="menu41">
+            <a>Asus</a>
+        </div>
+        <div class="menu41">
+            <a>Dell</a>
+        </div>
+        <div class="menu41">
+            <a>Gigabyte</a>
+        </div>
+        <div class="menu41">
+            <a>Apple</a>
+        </div>
+        <div class="menu42">
+            <a>Xem tat ca</a>
+        </div>
+    </div>
+    <div class="prhot">
+
+        @foreach (var item in studentProduct)
+        {
+            <a href="@Url.Action("Details", "Products", new { id = item.ProductID })">
+                <div class="prhot1">
+                    <img src="@Url.Content("~/Picture/product/" + item.ImageURL)" alt="picture" style="height:250px;margin-bottom:-20px;" />
+                    <h4 style="margin-left:15px;">@item.ProductName</h4>
+                    <table>
+                        <tr><td><a>CPU</a></td><td><a>@(item.LaptopSpecs?.CPU)</a></td></tr>
+                        <tr><td><a>Card</a></td><td><a>@(item.LaptopSpecs?.GraphicCard)</a></td></tr>
+                        <tr><td><a>RAM</a></td><td><a>@(item.LaptopSpecs?.RAM)</a></td></tr>
+                        <tr><td><a>Bo nho</a></td><td><a>@(item.LaptopSpecs?.Storage)</a></td></tr>
+
+                    </table>
+                    <div class="giagoc-giamgia">
+                        @if (item.ProductPromotions != null && item.ProductPromotions.Any())
+                        {
+                            var promo1 = item.ProductPromotions.FirstOrDefault()?.Promotion;
+                            if (promo1 != null && promo1.IsActive && promo1.StartDate <= DateTime.Now && promo1.EndDate >= DateTime.Now)
+                            {
+                                <s>@item.Price.ToString("N0") đ</s>
+                                <div class="pr1-khuyenmai">
+                                    <a>-@( (int)promo1.DiscountPercent )%</a>
+                                </div>
+                            }
+                        }
+                    </div>
+                    <br /><br />
+                    <div class="pr1-gia">
+                        @{
+                            decimal finalPrice = item.Price;
+                            var promo = item.ProductPromotions.FirstOrDefault()?.Promotion;
+                            if (promo != null && promo.IsActive && promo.StartDate <= DateTime.Now && promo.EndDate >= DateTime.Now)
+                            {
+                                finalPrice = item.Price * (100 - promo.DiscountPercent) / 100;
+                            }
+                        }
+                        <h2>@finalPrice.ToString("N0") đ</h2>
+                    </div>
+                </div>
+            </a>
+        }
+
+    </div>
+}
+@section Hight{
+    <div class="menu4">
+        <h3 style="margin-right: 360px;">Hoc sinh - Sinh vien</h3>
+        <div class="menu41">
+            <a>Acer</a>
+        </div>
+        <div class="menu41">
+            <a>Lenovo</a>
+        </div>
+        <div class="menu41">
+            <a>Asus</a>
+        </div>
+        <div class="menu41">
+            <a>Dell</a>
+        </div>
+        <div class="menu41">
+            <a>Gigabyte</a>
+        </div>
+        <div class="menu41">
+            <a>Apple</a>
+        </div>
+        <div class="menu42">
+            <a>Xem tat ca</a>
+        </div>
+    </div>
+    <div class="prhot">
+
+        @foreach (var item in HightProduct)
+        {
+            <a href="@Url.Action("Details", "Products", new { id = item.ProductID })">
+                <div class="prhot1">
+                    <img src="@Url.Content("~/Picture/product/" + item.ImageURL)" alt="picture" style="height:250px;margin-bottom:-20px;" />
+                    <h4 style="margin-left:15px;">@item.ProductName</h4>
+                    <table>
+                        <tr><td><a>CPU</a></td><td><a>@(item.LaptopSpecs?.CPU)</a></td></tr>
+                        <tr><td><a>Card</a></td><td><a>@(item.LaptopSpecs?.GraphicCard)</a></td></tr>
+                        <tr><td><a>RAM</a></td><td><a>@(item.LaptopSpecs?.RAM)</a></td></tr>
+                        <tr><td><a>Bo nho</a></td><td><a>@(item.LaptopSpecs?.Storage)</a></td></tr>
+
+                    </table>
+                    <div class="giagoc-giamgia">
+                        @if (item.ProductPromotions != null && item.ProductPromotions.Any())
+                        {
+                            var promo1 = item.ProductPromotions.FirstOrDefault()?.Promotion;
+                            if (promo1 != null && promo1.IsActive && promo1.StartDate <= DateTime.Now && promo1.EndDate >= DateTime.Now)
+                            {
+                                <s>@item.Price.ToString("N0") đ</s>
+                                <div class="pr1-khuyenmai">
+                                    <a>-@( (int)promo1.DiscountPercent )%</a>
+                                </div>
+                            }
+                        }
+                    </div>
+                    <br /><br />
+                    <div class="pr1-gia">
+                        @{
+                            decimal finalPrice = item.Price;
+                            var promo = item.ProductPromotions.FirstOrDefault()?.Promotion;
+                            if (promo != null && promo.IsActive && promo.StartDate <= DateTime.Now && promo.EndDate >= DateTime.Now)
+                            {
+                                finalPrice = item.Price * (100 - promo.DiscountPercent) / 100;
+                            }
+                        }
+                        <h2>@finalPrice.ToString("N0") đ</h2>
+                    </div>
+                </div>
+            </a>
+        }
+
+    </div>
+}
+@section Mouse{
+    <div class="menu4">
+        <h3 style="margin-right: 360px;">Chuot</h3>
+        <div class="menu41">
+            <a>Acer</a>
+        </div>
+        <div class="menu41">
+            <a>Lenovo</a>
+        </div>
+        <div class="menu41">
+            <a>Asus</a>
+        </div>
+        <div class="menu41">
+            <a>Dell</a>
+        </div>
+        <div class="menu41">
+            <a>Gigabyte</a>
+        </div>
+        <div class="menu41">
+            <a>Apple</a>
+        </div>
+        <div class="menu42">
+            <a>Xem tat ca</a>
+        </div>
+    </div>
+    <div class="prhot">
+
+        @foreach (var item in mouseProducts)
+        {
+            <a href="@Url.Action("Details", "Products", new { id = item.ProductID })">
+                <div class="prhot1">
+                    <img src="@Url.Content("~/Picture/product/" + item.ImageURL)" alt="picture" style="height:250px;margin-bottom:-20px;" />
+                    <h4 style="margin-left:15px;">@item.ProductName</h4>
+                    <table>
+                        <tr><td><a>DPI</a></td><td><a>@(item.MouseSpecs?.DPI)</a></td></tr>
+                        <tr><td><a>Kết nối</a></td><td><a>@(item.MouseSpecs?.ConnectionType)</a></td></tr>
+                        <tr><td><a>Pin</a></td><td><a>@(item.MouseSpecs?.Battery)</a></td></tr>
+                    </table>
+                    <div class="giagoc-giamgia">
+                        @if (item.ProductPromotions != null && item.ProductPromotions.Any())
+                        {
+                            var promo1 = item.ProductPromotions.FirstOrDefault()?.Promotion;
+                            if (promo1 != null && promo1.IsActive && promo1.StartDate <= DateTime.Now && promo1.EndDate >= DateTime.Now)
+                            {
+                                <s>@item.Price.ToString("N0") đ</s>
+                                <div class="pr1-khuyenmai">
+                                    <a>-@( (int)promo1.DiscountPercent )%</a>
+                                </div>
+                            }
+                        }
+                    </div>
+                    <br /><br />
+                    <div class="pr1-gia">
+                        @{
+                            decimal finalPrice = item.Price;
+                            var promo = item.ProductPromotions.FirstOrDefault()?.Promotion;
+                            if (promo != null && promo.IsActive && promo.StartDate <= DateTime.Now && promo.EndDate >= DateTime.Now)
+                            {
+                                finalPrice = item.Price * (100 - promo.DiscountPercent) / 100;
+                            }
+                        }
+                        <h2>@finalPrice.ToString("N0") đ</h2>
+                    </div>
+                </div>
+            </a>
+        }
+
+    </div>
+}

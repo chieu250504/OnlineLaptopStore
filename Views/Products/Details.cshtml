@@ -1,0 +1,289 @@
+﻿@model List<Laptop88_3.Models.ProductWithSpecs>
+
+@{
+    Layout = "~/Views/Shared/Layout_header2.cshtml";
+    var product = Model.First(); 
+    var related = product.RelatedProducts ?? new List<Laptop88_3.Models.ProductWithSpecs>();
+    var Product = Model.FirstOrDefault();
+}
+@section product{
+    <div class="navbar2">
+        <div class="navbar2-inner">
+            <div class="nav2-i1">
+                <a>DANH MUC SAN PHAM</a>
+            </div>
+            <div class="nav2-i2">
+                <a>LOQ RTX 3050 chi 19Tr re nhat TT</a>
+            </div>
+            <div class="nav2-i2">
+                <a>Laptop gaming RE NHAT TT chi 15Tr</a>
+            </div>
+            <div class="nav2-i2">
+                <a>Thinkbook 16 - Ultrabook chien game khoe mat</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="duongdan">
+        <a> Trang chu / @Product.ProductName </a>
+    </div>
+
+    <div class="tensp">
+        <h3>@Product.ProductName</h3>
+    </div>
+
+    <div class="sp-container">
+        <div class="sp-container1">
+            <img src="@Url.Content("~/Picture/product/" + Product.ImageURL)" alt="picture" style="height:400px; border-radius:15px" />
+            <div class="pr-img">
+                <img src="@Url.Content("~/Picture/product/" + Product.ImageURL)" alt="picture" style="height:133px;" />
+                <img src="@Url.Content("~/Picture/product/" + Product.ImageURL)" alt="picture" style="height:133px;" />
+                <img src="@Url.Content("~/Picture/product/" + Product.ImageURL)" alt="picture" style="height:133px;" />
+            </div>
+            <div class="promotion">
+                @if (Product.DiscountPercent.HasValue)
+                {
+                    <div>
+                        <a>🔥 Giảm @Product.DiscountPercent% cho sản phẩm này</a><br />
+                    </div>
+                }
+                @if (Product.ProductGifts != null && Product.ProductGifts.Any())
+                {
+                    <div>
+                        <strong>🎁 Quà tặng kèm:</strong><br />
+                        @foreach (var gift in Product.ProductGifts)
+                        {
+                            <div style="margin-top: 5px;">
+                                <img src="@Url.Content("~/Picture/product/" + gift.ImageURL)"
+                                     alt="@gift.ProductName"
+                                     style="width:60px;height:60px;border-radius:8px;color:black;" />
+                                <span>@gift.ProductName</span>
+                            </div>
+                        }
+                    </div>
+                }
+
+            </div>
+
+            <div class="comment">
+                ✅ Các sản phẩm bán GIÁ SHOCK, các quà tặng đánh dấu (*) sẽ không áp dụng khi thanh toán qua các loại thẻ: VISA / MASTER / JCB / Amex.
+            </div>
+        </div>
+
+        <div class="sp-container2">
+            <div class="promotion2">
+                <div class="gia">
+                    <div class="newPrice">
+                        <a>@(Product.FinalPrice.ToString("N0")) ₫</a>
+                    </div>
+                    <div class="OldPrice">
+                        <s>@(Product.Price.ToString("N0")) ₫</s>
+                        @if (Product.DiscountPercent.HasValue)
+                        {
+                            <a style="font-weight:600;padding-left:5px;">-@Product.DiscountPercent.Value %</a>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="tinhtrang">
+                <a> New 100%</a>
+            </div>
+
+            <div class="splq-container">
+                @foreach (var item in Product.RelatedProducts)
+                {
+                    <div class="splq" onclick="location.href='@Url.Action("Details", "Products", new { id = item.ProductID })';">
+                        <a>@item.ProductName</a><br />
+                       
+                        @if (!string.IsNullOrEmpty(item.CPU))
+                        {
+                            <a>@item.CPU | @item.GraphicCard | @item.RAM | @item.Storage</a><br />
+                        }
+                        @if (!string.IsNullOrEmpty(item.DPI))
+                        {
+                            <a>@item.DPI | @item.ConnectionType | @item.Battery</a><br />
+                        }
+                        <b>@(item.Price.ToString("N0")) ₫</b>
+                    </div>
+                }
+            </div>
+
+
+            <div class="luuy">
+                <i>***Bấm chọn cấu hình để xem giá và cơ sở có hàng</i>
+            </div>
+
+           
+            @if (!string.IsNullOrEmpty(Product.CPU))
+            {
+                <div class="thongso-container">
+                    <div class="thongso"><a>CPU</a></div>
+                    <div class="giatri"><a>@Product.CPU</a></div>
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(Product.RAM))
+            {
+                <div class="thongso-container">
+                    <div class="thongso"><a>RAM</a></div>
+                    <div class="giatri"><a>@Product.RAM</a></div>
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(Product.Storage))
+            {
+                <div class="thongso-container">
+                    <div class="thongso"><a>Ổ cứng</a></div>
+                    <div class="giatri"><a>@Product.Storage</a></div>
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(Product.GraphicCard))
+            {
+                <div class="thongso-container">
+                    <div class="thongso"><a>Card đồ họa</a></div>
+                    <div class="giatri"><a>@Product.GraphicCard</a></div>
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(Product.Display))
+            {
+                <div class="thongso-container">
+                    <div class="thongso"><a>Màn hình</a></div>
+                    <div class="giatri"><a>@Product.Display</a></div>
+                </div>
+            }
+
+            
+            @if (!string.IsNullOrEmpty(Product.DPI))
+            {
+                <div class="thongso-container">
+                    <div class="thongso"><a>DPI</a></div>
+                    <div class="giatri"><a>@Product.DPI</a></div>
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(Product.ConnectionType))
+            {
+                <div class="thongso-container">
+                    <div class="thongso"><a>Kết nối</a></div>
+                    <div class="giatri"><a>@Product.ConnectionType</a></div>
+                </div>
+            }
+
+            @if (!string.IsNullOrEmpty(Product.Battery))
+            {
+                <div class="thongso-container">
+                    <div class="thongso"><a>Pin</a></div>
+                    <div class="giatri"><a>@Product.Battery</a></div>
+                </div>
+            }
+            <div class="chatnv">
+                <a>chat với nhân viên tư vấn</a>
+            </div>
+
+            <div class="mua-container">
+                <div class="mua">
+                    <div class="mua1">Mua trả góp</div>
+                    <a>thủ tục đơn giản, lãi suất thấp</a>
+                </div>
+                <div class="mua" style="margin-left:15px;">
+                    <div class="mua1">Mua ngay</div>
+                    <a>Giao tận nơi hoặc nhận ở cửa hàng</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sp-container3">
+            <div class="khohang-container">
+                <div class="khohang-title">
+                    <i class="fa fa-map-marker-alt"></i> Địa chỉ kho hàng
+                </div>
+
+                <select class="dropdown">
+                    <option>Tỉnh/Thành</option>
+                </select>
+
+                <p class="store-count">
+                    Có <span class="highlight">3</span> cửa hàng có sản phẩm này
+                </p>
+
+                <div class="store">
+                    <i class="fa fa-phone"></i>
+                    <span class="phone">0904583588</span>
+                    <a class="address" href="#">125 Trần Đại Nghĩa, Hà Nội</a>
+                </div>
+
+                <div class="store">
+                    <i class="fa fa-phone"></i>
+                    <span class="phone">0904666488</span>
+                    <a class="address" href="#">LK3C5 Nguyễn Văn Lộc, Hà Đông</a>
+                </div>
+
+                <div class="store">
+                    <i class="fa fa-phone"></i>
+                    <span class="phone">0906299288</span>
+                    <a class="address" href="#">277 Nguyễn Văn Cừ, Long Biên</a>
+                </div>
+
+                @using (Html.BeginForm("AddToCart", "Products", FormMethod.Post))
+                {
+                    @Html.Hidden("productId", Product.ProductID)
+                    <button type="submit" class="add-to-cart">Thêm vào giỏ hàng</button>
+                }
+            </div>
+            <div class="warranty-box">
+                <div class="warranty-title">Thông tin bảo hành</div>
+
+                <div class="warranty-content">
+                    <p>
+                        <span class="check-icon">✅</span> Bảo hành 12 tháng Laptop88
+                    </p>
+
+                    <p class="sub-option">
+                        <span class="option-icon">🔮</span> Tùy chọn:
+                        <br><br />– Gói <strong>BẢO HÀNH VÀNG :</strong><br />gia tăng thêm 12 tháng bảo hành<br />
+                        <br>– Gói <strong>BẢO HÀNH KIM CƯƠNG :</strong><br />gia tăng thêm 24 tháng bảo hành<br />
+                    </p>
+
+                    <p>
+                        <span class="check-icon">✅</span> MIỄN PHÍ GIAO HÀNG TẬN NHÀ
+                    </p>
+
+                    <ul class="warranty-list">
+                        <li>Với đơn hàng < 4.000.000 đồng: Miễn phí giao hàng cho đơn hàng < 5km tính từ cửa hàng Laptop88 gần nhất</li>
+                        <br />
+                        <li>Với đơn hàng > 4.000.000 đồng: Miễn phí giao hàng (khách hàng chịu phí bảo hiểm hàng hóa nếu có)</li>
+                        <br />
+                    </ul>
+                </div>
+            </div>
+            <div class="warranty-box">
+                <div class="warranty-title">Yên tâm mua hàng</div><br />
+                <ul class="warranty-list">
+                    <li>Hệ thống cửa hàng toàn quốc</li>
+                    <br />
+                    <li>Đại lý phân phối chính hãng</li>
+                    <br />
+                    <li>Giá luôn tốt nhất</li>
+                    <br />
+                    <li>Hỗ trợ trả góp lãi suất thấp</li>
+                    <br />
+                    <li>Bảo hành dài, hậu mãi chu đáo</li>
+                    <br />
+                    <li>Miễn phí giao hàng toàn quốc</li>
+                    <br />
+                </ul>
+                <div class="warranty-content">
+                </div>
+            </div>
+            <div class="voucher-img">
+                <img src="@Url.Content("~/Picture/Pane/voucher.png")" alt="search" />
+            </div>
+
+        </div>
+    </div>
+
+}
+
+
+
+
+
+

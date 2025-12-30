@@ -1,0 +1,88 @@
+﻿@model Laptop88_3.Models.User
+@{
+    Layout = "~/Views/Shared/layout_header2.cshtml";
+}
+
+@section Profile{
+    <div class="profile-container" style="display:flex">
+        <div class="sidebar" style="width:150px">
+            <ul>
+                <li><a href="#" class="tab-link" data-url="@Url.Action("InfoPartial","User")">Thông tin cá nhân</a></li>
+                <li><a href="#" class="tab-link" data-url="@Url.Action("CartPartial","User")">Giỏ hàng</a></li>
+                <li><a href="#" class="tab-link" data-url="@Url.Action("OrdersPartial","User")?status=Pending">Đang giao</a></li>
+                <li><a href="#" class="tab-link" data-url="@Url.Action("OrdersPartial","User")?status=Completed">Đã giao</a></li>
+                <li><a href="#" class="tab-link" data-url="@Url.Action("OrdersPartial","User")?status=Cancelled">Đã hủy</a></li>
+
+            </ul>
+        </div>
+
+        <div class="tab-content" style="flex:1; padding-left:20px" id="tabContent">
+            @Html.Action("InfoPartial", "User")
+        </div>
+    </div>
+
+}
+@section scripts{
+    <script>
+        $(document).on("click", ".tab-link", function (e) {
+            e.preventDefault();
+            var url = $(this).data("url");
+
+            $.get(url, function (data) {
+                $("#tabContent").html(data);
+                bindUpdateInfoForm();
+            });
+        });
+
+        function bindUpdateInfoForm() {
+            console.log("Bind UpdateInfoForm is running...");
+
+            $(document).off("submit", "#updateInfoForm");
+
+            $(document).on("submit", "#updateInfoForm", function (e) {
+                e.preventDefault();
+                var form = $(this);
+
+                
+                if (!confirm("Bạn có chắc muốn cập nhật thông tin?")) {
+                    return; 
+                }
+
+                
+                $.ajax({
+                    url: form.attr("action"),
+                    type: "POST",
+                    data: form.serialize(),
+                    success: function (data) {
+                        
+                        $("#tabContent").html(data);
+                        bindUpdateInfoForm();
+                        showUpdateMessage("✔ Cập nhật thông tin thành công!");
+                    },
+                    error: function (xhr) {
+                        showUpdateMessage("⛔ Có lỗi xảy ra, vui lòng thử lại!", true);
+                    }
+                });
+            });
+        }
+
+        function showUpdateMessage(message, isError = false) {
+            if ($("#updateToast").length === 0) {
+                $("body").append('<div id="updateToast" style="position:fixed; top:70px; right:45%; padding:15px; border-radius:5px; color:white; font-weight:bold; z-index:9999;"></div>');
+            }
+
+            var bgColor = isError ? "#e74c3c" : "#2ecc71";
+            $("#updateToast").css("background-color", bgColor).text(message).fadeIn();
+
+            setTimeout(function () {
+                $("#updateToast").fadeOut();
+            }, 3000);
+        }
+
+
+        $(document).ready(function () {
+            bindUpdateInfoForm();
+        });
+    </script>
+}
+

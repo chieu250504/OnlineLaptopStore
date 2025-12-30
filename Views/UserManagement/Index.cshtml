@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Danh sách người dùng";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model List<Laptop88_3.Models.User>
+
+<div class="order-container">
+    <h2>👤 Danh sách người dùng</h2>
+
+    @if (TempData["success"] != null)
+    {
+        <div class="alert alert-success">@TempData["success"]</div>
+    }
+    @if (TempData["error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["error"]</div>
+    }
+
+    <table class="order-table">
+        <thead>
+            <tr>
+                <th style="width:80px;">Mã</th>
+                <th style="width:150px;">Tên đăng nhập</th>
+                <th style="width:200px;">Email</th>
+                <th style="width:160px;">Họ và tên</th>
+                <th style="width:120px;">SĐT</th>
+                <th style="width:220px;">Địa chỉ</th>
+                <th style="width:100px;">Quyền</th>
+                <th style="width:140px;">Ngày tạo</th>
+                <th style="width:200px;">
+                    <a href="/UserManagement/Create" class="create-btn">Thêm mới +</a>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var u in Model)
+            {
+                <tr>
+                    <td>@u.UserID</td>
+                    <td>@u.Username</td>
+                    <td>@u.Email</td>
+                    <td>@u.FullName</td>
+                    <td>@u.PhoneNumber</td>
+                    <td class="truncate" title="@u.Address">@u.Address</td>
+                    <td>@u.Role</td>
+                    <td>@u.CreatedAt.ToString("dd/MM/yyyy")</td>
+
+                    <td class="icon-cell">
+                        <a href="@Url.Action("Detail", "UserManagement", new { id = u.UserID })">
+                            <img src="~/Picture/Icon/detail.png" class="action-icon" title="Xem chi tiết" />
+                        </a>
+                        <a href="@Url.Action("Delete", "UserManagement", new { id = u.UserID })"
+                           onclick="return confirm('Bạn có chắc muốn xóa người dùng này?');">
+                            <img src="~/Picture/Icon/delete.png" class="action-icon" title="Xóa" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

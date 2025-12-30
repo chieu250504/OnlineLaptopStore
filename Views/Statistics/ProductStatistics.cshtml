@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Thống kê sản phẩm";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    .main-content {
+        margin-left: 200px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        min-height: 90vh;
+        box-sizing: border-box;
+    }
+
+        .main-content h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+    .stats-buttons {
+        margin-bottom: 20px;
+    }
+
+        .stats-buttons a {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-right: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+            .stats-buttons a.active {
+                background-color: #28a745;
+            }
+
+            .stats-buttons a:hover {
+                background-color: #0056b3;
+                transform: translateY(-2px);
+            }
+
+    .chart-container {
+        overflow-x: auto;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
+    
+    canvas {
+        height: 600px !important;
+    }
+
+    .message {
+        font-size: 18px;
+        color: red;
+        margin-top: 20px;
+    }
+</style>
+
+<div class="main-content">
+    <h2>@ViewBag.Title</h2>
+
+    <div class="stats-buttons">
+        <a href="@Url.Action("ProductStatistics", "Statistics", new { sort = "topsold" })"
+           class="@(ViewBag.Sort == "topsold" ? "active" : "")">Bán nhiều nhất</a>
+        <a href="@Url.Action("ProductStatistics", "Statistics", new { sort = "lowsold" })"
+           class="@(ViewBag.Sort == "lowsold" ? "active" : "")">Bán ít nhất</a>
+        <a href="@Url.Action("ProductStatistics", "Statistics", new { sort = "toprevenue" })"
+           class="@(ViewBag.Sort == "toprevenue" ? "active" : "")">Doanh thu cao nhất</a>
+        <a href="@Url.Action("ProductStatistics", "Statistics", new { sort = "lowrevenue" })"
+           class="@(ViewBag.Sort == "lowrevenue" ? "active" : "")">Doanh thu thấp nhất</a>
+    </div>
+
+    @if (ViewBag.Message != null)
+    {
+        <div class="message">@ViewBag.Message</div>
+    }
+    else
+    {
+        <div class="chart-container">
+            <canvas id="productChart"></canvas>
+        </div>
+    }
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const labels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.Labels));
+const data = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.Data));
+const sort = "@ViewBag.Sort";
+
+if(labels.length > 0){
+    const canvas = document.getElementById('productChart');
+    const ctx = canvas.getContext('2d');
+    const extraSpace = 80;
+    canvas.height = 500;
+    const columnWidth = 60; // chiều rộng mỗi cột
+    
+    canvas.width = labels.length * (columnWidth + extraSpace);
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: (sort.includes("revenue") ? "Doanh thu (VNĐ)" : "Số lượng bán"),
+                data: data,
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                maxBarThickness: 60
+            }]
+        },
+        options: {
+            responsive: false,
+            scales: {
+                x: {
+                    ticks: {
+                        maxRotation: 0,  
+                        minRotation: 0,
+                        autoSkip: false  
+                    },
+                    grid: { display: false },
+                    barPercentage: 0.3,     // cột càng hẹp → khoảng cách giữa các cột rộng hơn
+                    categoryPercentage: 0.4// tăng khoảng cách giữa cột
+                },
+                y: { beginAtZero: true }
+            },
+            plugins: { legend: { display: true } }
+        }
+    });
+}
+</script>

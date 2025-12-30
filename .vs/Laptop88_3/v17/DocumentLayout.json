@@ -1,0 +1,1404 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Laptop88\\Laptop88_3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\homeadmin\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\homeadmin\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\usermanagement\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\usermanagement\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\user\\_orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\user\\_orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\user\\_info.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\user\\_info.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\user\\_cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\user\\_cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\shared\\layout_header2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\shared\\layout_header2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\shared\\layout_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\shared\\layout_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\views\\search\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\search\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\promotionmanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\promotionmanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\promotionmanagement\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\promotionmanagement\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\promotionmanagement\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\promotionmanagement\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\views\\productmanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\productmanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\productmanagement\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\productmanagement\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\views\\productmanagement\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\productmanagement\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\views\\payment\\paymentpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\payment\\paymentpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\ordermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\ordermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\ordermanagement\\detailorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\ordermanagement\\detailorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\views\\oder\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\oder\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\giftproductmanagerment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\giftproductmanagerment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\checkout\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\checkout\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\views\\cart\\_cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\cart\\_cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\filters\\adminauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:filters\\adminauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\searchapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\searchapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\promotionmanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\promotionmanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\productmanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\productmanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|c:\\laptop88\\laptop88_3\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\ordermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\ordermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\odercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\odercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\giftproductmanagermentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\giftproductmanagermentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptop88\\Laptop88_3\\Services\\DbInitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\DbInitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\migrations\\202511251439255_changeorderaddresstocode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:migrations\\202511251439255_changeorderaddresstocode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\migrations\\202511251426126_changeorderaddresstoname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:migrations\\202511251426126_changeorderaddresstoname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\content\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:content\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\content\\style_home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:content\\style_home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\productwithspecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\productwithspecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\oderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\oderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\content\\style_admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:content\\style_admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\statistics\\productstatistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\statistics\\productstatistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\addresapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\addresapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\migrations\\202511131554332_adddescriptiontoorder2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:migrations\\202511131554332_adddescriptiontoorder2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\migrations\\202511131549317_addshippingcodetoorders1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:migrations\\202511131549317_addshippingcodetoorders1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\migrations\\202511131545288_addshippingcodetoorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:migrations\\202511131545288_addshippingcodetoorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\migrations\\202511110649085_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:migrations\\202511110649085_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\mousespecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\mousespecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\laptopspecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\laptopspecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptop88\\Laptop88_3 - 1\\Views\\Web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|C:\\Laptop88\\Laptop88_3\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28A14B24-A713-4CA5-A0A1-1E7921E8BA8C}|Laptop88_3.csproj|solutionrelative:models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Info.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\User\\_Info.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\_Info.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\User\\_Info.cshtml",
+              "RelativeToolTip": "Views\\User\\_Info.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T08:57:51.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Orders.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\User\\_Orders.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\_Orders.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\User\\_Orders.cshtml",
+              "RelativeToolTip": "Views\\User\\_Orders.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T08:58:10.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\User\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\Profile.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\User\\Profile.cshtml",
+              "RelativeToolTip": "Views\\User\\Profile.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T08:13:43.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\UserManagement\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\UserManagement\\Create.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\UserManagement\\Create.cshtml",
+              "RelativeToolTip": "Views\\UserManagement\\Create.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T15:30:20.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\UserManagement\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\UserManagement\\Index.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\UserManagement\\Index.cshtml",
+              "RelativeToolTip": "Views\\UserManagement\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T15:25:34.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Global.asax.cs",
+              "RelativeDocumentMoniker": "Global.asax.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Global.asax.cs",
+              "RelativeToolTip": "Global.asax.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:33:40.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\HomeAdmin\\Home.cshtml",
+              "RelativeDocumentMoniker": "Views\\HomeAdmin\\Home.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\HomeAdmin\\Home.cshtml",
+              "RelativeToolTip": "Views\\HomeAdmin\\Home.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAB8AAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-05T14:43:08.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T06:38:52.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T06:38:58.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "Data\\DbInitializer.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "Data\\DbInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T05:55:36.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T06:35:21.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-06T09:14:46.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Cart.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\User\\_Cart.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\_Cart.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\User\\_Cart.cshtml",
+              "RelativeToolTip": "Views\\User\\_Cart.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T15:34:57.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Layout_header2.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Shared\\Layout_header2.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Layout_header2.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Shared\\Layout_header2.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Layout_header2.cshtml",
+              "ViewState": "AgIAAPQAAAAAAAAAAAAAAFAAAACIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-02T09:05:55.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Layout_header.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Shared\\Layout_header.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Layout_header.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Shared\\Layout_header.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Layout_header.cshtml",
+              "ViewState": "AgIAABUCAAAAAAAAAAAAALABAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T15:08:56.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T06:38:51.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Search\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Search\\Index.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Search\\Index.cshtml",
+              "RelativeToolTip": "Views\\Search\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T06:38:39.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Products\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Details.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Products\\Details.cshtml",
+              "RelativeToolTip": "Views\\Products\\Details.cshtml",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAAAJkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T06:37:46.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\ProductManagement\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductManagement\\Index.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\ProductManagement\\Index.cshtml",
+              "RelativeToolTip": "Views\\ProductManagement\\Index.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T06:37:36.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\ProductManagement\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductManagement\\Create.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\ProductManagement\\Create.cshtml",
+              "RelativeToolTip": "Views\\ProductManagement\\Create.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T06:37:26.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PaymentPage.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Payment\\PaymentPage.cshtml",
+              "RelativeDocumentMoniker": "Views\\Payment\\PaymentPage.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Payment\\PaymentPage.cshtml",
+              "RelativeToolTip": "Views\\Payment\\PaymentPage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T06:37:22.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Oder\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Views\\Oder\\Detail.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Oder\\Detail.cshtml",
+              "RelativeToolTip": "Views\\Oder\\Detail.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T06:37:02.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Success.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Checkout\\Success.cshtml",
+              "RelativeDocumentMoniker": "Views\\Checkout\\Success.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Checkout\\Success.cshtml",
+              "RelativeToolTip": "Views\\Checkout\\Success.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-09T15:01:30.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Checkout\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Checkout\\Index.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Checkout\\Index.cshtml",
+              "RelativeToolTip": "Views\\Checkout\\Index.cshtml",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAKsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T08:29:17.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\GiftProductManagerment\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\GiftProductManagerment\\Index.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\GiftProductManagerment\\Index.cshtml",
+              "RelativeToolTip": "Views\\GiftProductManagerment\\Index.cshtml",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAACYAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-15T08:48:25.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T14:32:08.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\PromotionManagement\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\PromotionManagement\\Create.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\PromotionManagement\\Create.cshtml",
+              "RelativeToolTip": "Views\\PromotionManagement\\Create.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAGIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T07:20:54.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\PromotionManagement\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\PromotionManagement\\Edit.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\PromotionManagement\\Edit.cshtml",
+              "RelativeToolTip": "Views\\PromotionManagement\\Edit.cshtml",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAUwHMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T07:14:30.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\PromotionManagement\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\PromotionManagement\\Index.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\PromotionManagement\\Index.cshtml",
+              "RelativeToolTip": "Views\\PromotionManagement\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T06:58:51.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cart\\Index.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "Views\\Cart\\Index.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAH0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T06:36:00.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_Cart.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Cart\\_Cart.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cart\\_Cart.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Cart\\_Cart.cshtml",
+              "RelativeToolTip": "Views\\Cart\\_Cart.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T06:35:46.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\ProductManagement\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductManagement\\Edit.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\ProductManagement\\Edit.cshtml",
+              "RelativeToolTip": "Views\\ProductManagement\\Edit.cshtml",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAAGcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-15T07:38:09.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AdminAuthorizeAttribute.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Filters\\AdminAuthorizeAttribute.cs",
+              "RelativeDocumentMoniker": "Filters\\AdminAuthorizeAttribute.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Filters\\AdminAuthorizeAttribute.cs",
+              "RelativeToolTip": "Filters\\AdminAuthorizeAttribute.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T14:57:18.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DetailOrder.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\OrderManagement\\DetailOrder.cshtml",
+              "RelativeDocumentMoniker": "Views\\OrderManagement\\DetailOrder.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\OrderManagement\\DetailOrder.cshtml",
+              "RelativeToolTip": "Views\\OrderManagement\\DetailOrder.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAADMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T09:07:40.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\OrderManagement\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\OrderManagement\\Index.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\OrderManagement\\Index.cshtml",
+              "RelativeToolTip": "Views\\OrderManagement\\Index.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T13:57:44.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UserManagementController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\UserManagementController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserManagementController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\UserManagementController.cs",
+              "RelativeToolTip": "Controllers\\UserManagementController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA9wCwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T15:06:53.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAIwCAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:12:18.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "StatisticsController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\StatisticsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StatisticsController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\StatisticsController.cs",
+              "RelativeToolTip": "Controllers\\StatisticsController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAAGYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T06:34:18.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "SearchApiController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\SearchApiController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SearchApiController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\SearchApiController.cs",
+              "RelativeToolTip": "Controllers\\SearchApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T15:07:13.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "Views\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAAAHsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T15:52:14.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAAAJkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T15:56:26.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "PromotionManagementController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\PromotionManagementController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PromotionManagementController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\PromotionManagementController.cs",
+              "RelativeToolTip": "Controllers\\PromotionManagementController.cs",
+              "ViewState": "AgIAAF8BAAAAAAAAAAA5wDcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T06:57:46.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAAAIMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T15:07:34.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ProductManagementController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\ProductManagementController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductManagementController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\ProductManagementController.cs",
+              "RelativeToolTip": "Controllers\\ProductManagementController.cs",
+              "ViewState": "AgIAAGEBAAAAAAAAAAA9wGABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T13:42:59.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "Controllers\\PaymentController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAQwDcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T06:31:47.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "OderController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\OderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OderController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\OderController.cs",
+              "RelativeToolTip": "Controllers\\OderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T14:07:06.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAAAHQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T13:31:34.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "SearchController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\SearchController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SearchController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\SearchController.cs",
+              "RelativeToolTip": "Controllers\\SearchController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T15:11:44.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "HomeAdminController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\HomeAdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeAdminController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\HomeAdminController.cs",
+              "RelativeToolTip": "Controllers\\HomeAdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:08:14.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "GiftProductManagermentController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\GiftProductManagermentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GiftProductManagermentController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\GiftProductManagermentController.cs",
+              "RelativeToolTip": "Controllers\\GiftProductManagermentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T08:43:23.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "CheckoutController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\CheckoutController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CheckoutController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\CheckoutController.cs",
+              "RelativeToolTip": "Controllers\\CheckoutController.cs",
+              "ViewState": "AgIAAF8BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T08:12:05.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAJMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T08:49:26.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAADgBAAAAAAAAAAAAAC8AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T15:47:39.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "OrderManagementController.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Controllers\\OrderManagementController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderManagementController.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Controllers\\OrderManagementController.cs",
+              "RelativeToolTip": "Controllers\\OrderManagementController.cs",
+              "ViewState": "AgIAANoBAAAAAAAAAAAqwKkBAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T13:46:08.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\packages.config",
+              "RelativeDocumentMoniker": "packages.config",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\packages.config",
+              "RelativeToolTip": "packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-09-28T14:42:43.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\AppDbContext.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "Models\\AppDbContext.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T03:06:20.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Services\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "Services\\DbInitializer.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Services\\DbInitializer.cs",
+              "RelativeToolTip": "Services\\DbInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T09:52:07.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T07:34:29.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Models\\Order.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\Order.cs",
+              "RelativeToolTip": "Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T14:19:56.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA9wCUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T07:07:53.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T14:17:57.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "Script.js",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Content\\Script.js",
+              "RelativeDocumentMoniker": "Content\\Script.js",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Content\\Script.js",
+              "RelativeToolTip": "Content\\Script.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-09T13:56:54.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "202511251439255_ChangeOrderAddressToCode.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Migrations\\202511251439255_ChangeOrderAddressToCode.cs",
+              "RelativeDocumentMoniker": "Migrations\\202511251439255_ChangeOrderAddressToCode.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Migrations\\202511251439255_ChangeOrderAddressToCode.cs",
+              "RelativeToolTip": "Migrations\\202511251439255_ChangeOrderAddressToCode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T14:39:32.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "202511251426126_ChangeOrderAddressToName.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Migrations\\202511251426126_ChangeOrderAddressToName.cs",
+              "RelativeDocumentMoniker": "Migrations\\202511251426126_ChangeOrderAddressToName.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Migrations\\202511251426126_ChangeOrderAddressToName.cs",
+              "RelativeToolTip": "Migrations\\202511251426126_ChangeOrderAddressToName.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T14:26:20.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Style_Home.css",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Content\\Style_Home.css",
+              "RelativeDocumentMoniker": "Content\\Style_Home.css",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Content\\Style_Home.css",
+              "RelativeToolTip": "Content\\Style_Home.css",
+              "ViewState": "AgIAADEGAAAAAAAAAAAAwFUGAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-08T13:15:24.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "ProductWithSpecs.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\ProductWithSpecs.cs",
+              "RelativeDocumentMoniker": "Models\\ProductWithSpecs.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\ProductWithSpecs.cs",
+              "RelativeToolTip": "Models\\ProductWithSpecs.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA0wCUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T07:50:06.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "OderDetail.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\OderDetail.cs",
+              "RelativeDocumentMoniker": "Models\\OderDetail.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\OderDetail.cs",
+              "RelativeToolTip": "Models\\OderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T16:50:13.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "Style_Admin.css",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Content\\Style_Admin.css",
+              "RelativeDocumentMoniker": "Content\\Style_Admin.css",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Content\\Style_Admin.css",
+              "RelativeToolTip": "Content\\Style_Admin.css",
+              "ViewState": "AgIAAAICAAAAAAAAAADwvwICAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-05T14:51:29.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "ProductStatistics.cshtml",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Statistics\\ProductStatistics.cshtml",
+              "RelativeDocumentMoniker": "Views\\Statistics\\ProductStatistics.cshtml",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Statistics\\ProductStatistics.cshtml",
+              "RelativeToolTip": "Views\\Statistics\\ProductStatistics.cshtml",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAUwHMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T06:47:06.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "Models\\Payment.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\Payment.cs",
+              "RelativeToolTip": "Models\\Payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T15:07:50.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "AddresAPI.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\AddresAPI.cs",
+              "RelativeDocumentMoniker": "Models\\AddresAPI.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\AddresAPI.cs",
+              "RelativeToolTip": "Models\\AddresAPI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T14:02:22.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T13:57:35.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "202511131554332_AddDescriptionToOrder2.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Migrations\\202511131554332_AddDescriptionToOrder2.cs",
+              "RelativeDocumentMoniker": "Migrations\\202511131554332_AddDescriptionToOrder2.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Migrations\\202511131554332_AddDescriptionToOrder2.cs",
+              "RelativeToolTip": "Migrations\\202511131554332_AddDescriptionToOrder2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T15:54:37.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "202511131549317_AddShippingCodeToOrders1.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Migrations\\202511131549317_AddShippingCodeToOrders1.cs",
+              "RelativeDocumentMoniker": "Migrations\\202511131549317_AddShippingCodeToOrders1.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Migrations\\202511131549317_AddShippingCodeToOrders1.cs",
+              "RelativeToolTip": "Migrations\\202511131549317_AddShippingCodeToOrders1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T15:49:35.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "202511131545288_AddShippingCodeToOrders.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Migrations\\202511131545288_AddShippingCodeToOrders.cs",
+              "RelativeDocumentMoniker": "Migrations\\202511131545288_AddShippingCodeToOrders.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Migrations\\202511131545288_AddShippingCodeToOrders.cs",
+              "RelativeToolTip": "Migrations\\202511131545288_AddShippingCodeToOrders.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T15:45:33.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "202511110649085_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Migrations\\202511110649085_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\202511110649085_InitialCreate.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Migrations\\202511110649085_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\202511110649085_InitialCreate.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAACAAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T06:49:22.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\RegisterViewModel.cs",
+              "RelativeToolTip": "Models\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T15:08:00.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "MouseSpecs.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\MouseSpecs.cs",
+              "RelativeDocumentMoniker": "Models\\MouseSpecs.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\MouseSpecs.cs",
+              "RelativeToolTip": "Models\\MouseSpecs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T08:24:43.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "LaptopSpecs.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\LaptopSpecs.cs",
+              "RelativeDocumentMoniker": "Models\\LaptopSpecs.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\LaptopSpecs.cs",
+              "RelativeToolTip": "Models\\LaptopSpecs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T13:57:40.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Views\\Web.config",
+              "RelativeDocumentMoniker": "Views\\Web.config",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Views\\Web.config",
+              "RelativeToolTip": "Views\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-11T06:32:54.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T06:40:31.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3 - 1\\Views\\Web.config",
+              "RelativeDocumentMoniker": "..\\Laptop88_3 - 1\\Views\\Web.config",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3 - 1\\Views\\Web.config",
+              "RelativeToolTip": "..\\Laptop88_3 - 1\\Views\\Web.config",
+              "ViewState": "AgIAACMAAAAAAAAAAAAqwFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-11T07:17:52.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Laptop88\\Laptop88_3\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "Models\\CartItem.cs",
+              "ToolTip": "C:\\Laptop88\\Laptop88_3\\Models\\CartItem.cs",
+              "RelativeToolTip": "Models\\CartItem.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T13:57:31Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

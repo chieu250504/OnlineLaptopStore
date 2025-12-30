@@ -1,0 +1,130 @@
+﻿@model List<Laptop88_3.Controllers.CartViewModel>
+@{
+    Layout = null; // partial view
+}
+<div class="cart">
+    <div class="cart-title">
+        <div class="back">
+            <a href="@Url.Action("Index", "Products")">Trở về</a>
+        </div>
+        <div class="carttt">Giỏ hàng</div>
+    </div>
+
+    @foreach (var item in Model)
+    {
+        <div class="cart-item">
+            <img src="@Url.Content("~/Picture/product/" + item.ImageURL)" alt="@item.ProductName" />
+
+            <div class="cart-item-details">
+                <div class="cart-item-title">
+                    @item.ProductName
+                </div>
+
+                <div>
+                    <span class="cart-item-price">
+                        @String.Format("{0:N0}", item.FinalPrice) ₫
+                    </span>
+                    <span class="cart-item-old-price">
+                        @String.Format("{0:N0}", item.Price) ₫
+                    </span>
+                    @if (item.DiscountPercent.HasValue)
+                    {
+                        <span class="cart-item-discount">
+                            Giảm @item.DiscountPercent.Value %
+                        </span>
+                    }
+                </div>
+
+                <div class="quantity-control">
+                    <button class="btn-decrease" data-id="@item.CartItemID">-</button>
+                    <input type="text" value="@item.Quantity" readonly="readonly" class="quantity-box" id="qty-@item.CartItemID" />
+                    <button class="btn-increase" data-id="@item.CartItemID">+</button>
+                    <button class="remove-btn" data-id="@item.CartItemID">Xoá</button>
+                </div>
+
+                <div class="cart-promotion">
+                    <b>Chương trình khuyến mãi</b>
+                    <ul>
+                        <li>Tặng voucher trị giá 200.000 ₫</li>
+                    </ul>
+                </div>
+
+                <div class="mua2">
+                    <a href="@Url.Action("Index", "Checkout", new { productId = item.ProductID })" class="btn-buy">
+                        Mua
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    }
+
+    <div class="cart-summary">
+        <div class="cart-total1">
+            <div class="cart-total">
+                Tạm tính:
+                <span class="amount" id="cart-total">@String.Format("{0:N0}", ViewBag.TongTien) ₫</span>
+            </div>
+        </div>
+
+        <a href="@Url.Action("Index", "Checkout")" class="btn-primary">TIẾN HÀNH ĐẶT HÀNG</a>
+        <a href="@Url.Action("Index", "Home")" class="btn-secondary">CHỌN THÊM SẢN PHẨM KHÁC</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        function formatCurrency(num) {
+            return num.toLocaleString("vi-VN") + " ₫";
+        }
+
+        
+        function updateCartTotal() {
+            var total = 0;
+            $(".cart-item").each(function() {
+                var qty = parseInt($(this).find(".quantity-box").val()) || 0;
+                var price = parseFloat($(this).find(".cart-item-price").data("price")) || 0;
+                total += qty * price;
+            });
+            $("#cart-total").text(formatCurrency(total));
+        }
+
+        $(document).on("click", ".btn-increase", function () {
+            var id = $(this).data("id");
+            $.post("@Url.Action("Increase", "Cart")", { id: id }, function (res) {
+                if(res && res.qty !== undefined) {
+                    $("#qty-" + id).val(res.qty);
+                    updateCartTotal();
+                }
+            });
+        });
+
+        $(document).on("click", ".btn-decrease", function () {
+            var id = $(this).data("id");
+            $.post("@Url.Action("Decrease", "Cart")", { id: id }, function (res) {
+                if(res && res.qty !== undefined) {
+                    $("#qty-" + id).val(res.qty);
+                    updateCartTotal();
+                }
+            });
+        });
+
+        $(document).on("click", ".remove-btn", function () {
+            var id = $(this).data("id");
+            var row = $(this).closest(".cart-item");
+            $.post("@Url.Action("Remove", "Cart")", { id: id }, function (res) {
+                if(res && res.success) {
+                    row.remove();
+                    updateCartTotal();
+                }
+            });
+        });
+
+        $(".cart-item").each(function() {
+            var price = parseFloat($(this).find(".cart-item-price").text().replace(/[^0-9]/g,"")) || 0;
+            $(this).find(".cart-item-price").attr("data-price", price);
+        });
+
+    });
+</script>

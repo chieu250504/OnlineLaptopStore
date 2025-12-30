@@ -1,0 +1,108 @@
+﻿@model Laptop88_3.Controllers.ProductCreateEditViewModel
+
+@{
+    ViewBag.Title = "Chỉnh sửa sản phẩm";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="product-form-container">
+    <h2>Chỉnh sửa sản phẩm</h2>
+
+    @using (Html.BeginForm("Edit", "ProductManagement", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(m => m.ProductID)
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProductName)
+            @Html.TextBoxFor(m => m.ProductName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ProductName, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Price)
+            @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+
+            @Html.ValidationMessageFor(m => m.Price, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Stock)
+            @Html.TextBoxFor(m => m.Stock, new { @class = "form-control", type = "number", min = "0" })
+            @Html.ValidationMessageFor(m => m.Stock, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Danh mục")
+            @Html.DropDownListFor(m => m.CategoryID, Model.Categories, "-- Chọn danh mục --", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.CategoryID, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Màu sắc")
+            @Html.DropDownListFor(m => m.Color, Model.Colors, "-- Chọn màu --", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Color, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            <label>Khuyến mãi áp dụng</label>
+            <div class="checkbox-container">
+                @foreach (var promo in Model.Promotions)
+                {
+                    <div class="checkbox-item">
+                        <input type="checkbox"
+                               name="SelectedPromotionIDs"
+                               value="@promo.Value"
+                               @(Model.SelectedPromotionIDs.Contains(int.Parse(promo.Value)) ? "checked" : "") />
+                        <span>@promo.Text</span>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Quà tặng đi kèm</label>
+            <div class="checkbox-container">
+                @foreach (var gift in Model.Gifts)
+                {
+                    <div class="checkbox-item">
+                        <input type="checkbox"
+                               name="SelectedGiftProductIDs"
+                               value="@gift.Value"
+                               @(Model.SelectedGiftProductIDs.Contains(gift.Value) ? "checked" : "") />
+                        <span>@gift.Text</span>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ImageURL, "Tên file ảnh")
+            @Html.TextBoxFor(m => m.ImageURL, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ImageURL, "", new { @class = "text-danger" })
+        </div>
+
+        <button type="button" id="btn-submit-edit" class="btn btn-success">Cập nhật</button>
+        <a href="@Url.Action("Index", "ProductManagement")" class="btn btn-secondary">Hủy</a>
+    }
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    document.getElementById("btn-submit-edit").addEventListener("click", function (e) {
+        Swal.fire({
+            title: "Xác nhận lưu thay đổi?",
+            text: "Bạn có chắc muốn cập nhật thông tin sản phẩm không?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Có, lưu ngay",
+            cancelButtonText: "Hủy"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.forms[0].submit();  
+            }
+        });
+    });
+</script>

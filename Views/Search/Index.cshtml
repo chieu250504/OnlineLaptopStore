@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Kết quả tìm kiếm";
+    Layout = "~/Views/Shared/layout_header.cshtml";
+}
+
+@section Search{
+    <div class="prhot">
+        <h2>Kết quả tìm kiếm cho: "@ViewBag.Query"</h2>
+
+        <div id="searchResults">
+            <br />
+            <h2>dang tai du lieu</h2>
+        </div>
+
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+    let query = "@ViewBag.Query";
+
+    fetch("/SearchApi/Search?query=" + encodeURIComponent(query))
+        .then(res => {
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            return res.json();
+        })
+        .then(products => {
+            let container = document.getElementById("searchResults");
+            container.innerHTML = "";
+
+            if (!products || products.length === 0) {
+                container.innerHTML = "<br/><br/><h2>Không tìm thấy sản phẩm nào.</h2>";
+                return;
+            }
+
+            let prhot = document.createElement("div");
+            prhot.classList.add("prhot");
+
+            products.forEach(p => {
+                
+                let specsHtml = "";
+
+                if (p.CPU || p.RAM || p.Storage || p.GraphicsCard || p.Display) {
+                    // Laptop
+                    specsHtml = `
+                        <tr><td><a>CPU</a></td><td><a>${p.CPU || ""}</a></td></tr>
+                        <tr><td><a>RAM</a></td><td><a>${p.RAM || ""}</a></td></tr>
+                        <tr><td><a>SSD</a></td><td><a>${p.Storage || ""}</a></td></tr>
+                        <tr><td><a>CARD</a></td><td><a>${p.GraphicsCard || ""}</a></td></tr>
+                        <tr><td><a>Man.h</a></td><td><a>${p.Display || ""}</a></td></tr>
+                    `;
+                } else if (p.DPI) {
+                    // Chuột
+                    specsHtml = `
+                        <tr><td><a>DPI</a></td><td><a>${p.DPI || ""}</a></td></tr>
+                        <tr><td><a>ConnectionType</a></td><td><a>${p.ConnectionType || ""}</a></td></tr>
+                        <tr><td><a>Brand</a></td><td><a>${p.Brand || ""}</a></td></tr>
+                        <tr><td><a>Battery</a></td><td><a>${p.Battery || ""}</a></td></tr>
+                    `;
+                }
+
+                prhot.innerHTML += `
+                    <div class="prhot1" style="margin-bottom:12px;">
+                        <a href="/Products/Details/${p.ProductID}">
+                            <img src="/Picture/product/${p.ImageURL}" style="height:235px;margin-bottom:-20px;" />
+                            <h4 style="margin-left:15px;">${p.ProductName}</h4>
+                            <table>
+                                ${specsHtml}
+                            </table>
+                            <div class="giagoc-giamgia">
+                                <s>${p.Price ? Number(p.Price).toLocaleString() + " đ" : ""}</s>
+                                ${p.DiscountPercent ? `<div class="pr1-khuyenmai">-${p.DiscountPercent}%</div>` : ""}
+                            </div>
+                            <div class="pr1-gia">
+                                <h2>${p.FinalPrice ? Number(p.FinalPrice).toLocaleString() + " đ" : ""}</h2>
+                            </div>
+                        </a>
+                    </div>
+                `;
+            });
+
+            container.appendChild(prhot);
+        })
+        .catch(err => {
+            document.getElementById("searchResults").innerHTML = "Lỗi tải dữ liệu!";
+            console.error("Fetch error:", err);
+        });
+});
+        </script>
+    </div>
+}

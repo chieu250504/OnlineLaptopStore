@@ -1,0 +1,44 @@
+﻿@model Laptop88_3.Models.User
+@{
+    Layout = null; 
+}
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<div class="info-card">
+    <h3>Thông tin cá nhân</h3>
+
+    <div id="updateMessage"></div>
+
+    <form id="updateInfoForm" method="post" action="@Url.Action("UpdateInfo","User")">
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(m => m.UserID)
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.FullName)
+            @Html.TextBoxFor(m => m.FullName, new { @class = "form-control", placeholder = "Họ tên" })
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.PhoneNumber)
+            @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", placeholder = "Số điện thoại" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Address)
+            @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "Địa chỉ" })
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Cập nhật</button>
+            <a href="@Url.Action("ChangePassword", "User")" class="btn btn-secondary">Đổi mật khẩu</a>
+        </div>
+    </form>   
+</div>
+
+
+
